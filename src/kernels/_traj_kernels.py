@@ -11,6 +11,14 @@ scalar_function = Callable[[torch.Tensor], float]
 kernel_output = Union[torch.Tensor, Tuple[torch.Tensor, torch.Tensor]]
 
 
+def _path_signature(path: torch.Tensor, depth: int) -> torch.Tensor:
+    """Use Signatory compiled against the installed, patched PyTorch version."""
+    if path.device.type not in {"cpu", "cuda"}:
+        raise ValueError(
+            f"Signatory requires CPU or CUDA tensors; {path.device.type!r} is unsupported"
+        )
+    return signatory.signature(path, depth, basepoint=True)
+
 class TrajectoryKernel(BaseKernel):
     def __init__(self, bandwidth_fn: scalar_function = None, **kwargs):
         r"""Computes the gram matrix based on the RBF (squared exponential) kernel
@@ -122,8 +130,8 @@ class PathSigKernel(BaseKernel):
         if ref_vector is None and compute_grad is True:
             X.detach().requires_grad_(True)
             ref_vector = X
-        X_sig = signatory.signature(X, depth, basepoint=True)
-        Y_sig = signatory.signature(Y, depth, basepoint=True)
+        X_sig = _path_signature(X, depth)
+        Y_sig = _path_signature(Y, depth)
         # if self.kernel_type == "gaussian":
         #     xty = torch.matmul(X_sig, Y_sig.T)
         #     if h is None:

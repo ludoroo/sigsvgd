@@ -80,7 +80,7 @@ def plot_mean_results(
     color_key: str = "Case",
 ):
     try:
-        source = torch.load(data_path / "data.pkl")
+        source = torch.load(data_path / "data.pkl", weights_only=True)
         source = pd.DataFrame(source)
         source["CumCost"] = source["AvgCumCost"] * (source["Timestep"] + 1)
         columns = ["Case", y_key, x_key]
@@ -228,7 +228,7 @@ def plot_part2d_cost(paths: list, labels: list, kwargs={}, cmap="Blues"):
         cost_batch = torch.tensor([])
         for ep_path in [p for p in path.iterdir() if p.is_dir() and p.stem != "plots"]:
             try:
-                data = torch.load(ep_path / "data.pkl")
+                data = torch.load(ep_path / "data.pkl", weights_only=True)
                 costs = torch.as_tensor(data["costs"])
                 ep_length = costs.shape[0]
                 if ep_length < sim_length:
@@ -277,7 +277,7 @@ def plot_part2d_traj(path: Path, traj_kwargs={}, marker_kwargs={}, cmap="binary"
     traj_crashed = []
     for ep_path in [p for p in path.iterdir() if p.is_dir() and p.stem != "plots"]:
         try:
-            data = torch.load(ep_path / "data.pkl")
+            data = torch.load(ep_path / "data.pkl", weights_only=True)
             if data["costs"][-1] >= 1e6:  # if crashed
                 traj_crashed.append(True)
             else:
@@ -332,7 +332,7 @@ def plot_dist_ridgeplot(path: Path, gmm_std_dev=0.1, steps=None, n_plots=5):
     data_batch = []
     for ep_path in [p for p in path.iterdir() if p.is_dir() and p.stem != "plots"]:
         try:
-            ep_data = torch.load(ep_path / "data.pkl")
+            ep_data = torch.load(ep_path / "data.pkl", weights_only=True)
         except IOError as e:
             print("Couldn't load data file.")
             sys.exit(e)

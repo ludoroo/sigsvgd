@@ -128,11 +128,13 @@ def train(data_fname="obspts.csv", save_path=None):
 def load_trained_model(weight_fname, map_location="cpu"):
     try:
         # use the built in loading function
-        return ModelTrainer.load_from_checkpoint(weight_fname).net
+        return ModelTrainer.load_from_checkpoint(
+            weight_fname, map_location=map_location, weights_only=True
+        ).net
 
     except TypeError:
         # try to manually load the weight
-        weights = torch.load(weight_fname, map_location=map_location)
+        weights = torch.load(weight_fname, map_location=map_location, weights_only=True)
         _inner_weights = {}
         _net_prefix_token = "net."
         for k, v in weights["state_dict"].items():

@@ -9,7 +9,7 @@ here = os.path.realpath(os.path.dirname(__file__))
 name = "sigsvgd"
 
 # we actually store the version in the __version__ attribute in the source
-with io.open(os.path.join(here, name, "__init__.py")) as f:
+with io.open(os.path.join(here, "src", "__init__.py")) as f:
     meta_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", f.read(), re.M)
     if meta_match:
         version = meta_match.group(1)
@@ -44,17 +44,18 @@ classifiers = [
     "Operating System :: Microsoft :: Windows",
     "Operating System :: Unix",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.5",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Topic :: Scientific/Engineering :: Mathematics",
 ]
 
-python_requires = ">=3.5, <4"
+python_requires = ">=3.10, <4"
 
 install_requires = [
-    "torch==1.9.0",
+    # Keep the native Signatory build tied to the validated PyTorch ABI.
+    "torch==2.13.0",
+    # The version suffix names its original target, not a torch dependency.
+    # Rebuild from source with scripts/install_signatory.py before installing.
     "signatory==1.2.6.1.9.0",
     "plotly>=5",
     "pandas",
@@ -88,5 +89,5 @@ setuptools.setup(
     zip_safe=False,
     python_requires=python_requires,
     install_requires=install_requires,
-    packages=[name],
+    packages=setuptools.find_packages(include=["src", "src.*"]),
 )

@@ -1,0 +1,108 @@
+{
+  "backend": "local",
+  "cases": {
+    "channels_20x25x3_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0029412914300337434,
+        "p95_seconds": 0.0031108749215491113,
+        "samples": 30
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0008607294876128435,
+        "p95_seconds": 0.000892860721796751,
+        "samples": 30
+      }
+    },
+    "channels_20x25x3_f64": {
+      "forward_backward": {
+        "median_seconds": 0.0029774790164083242,
+        "p95_seconds": 0.0031225104234181345,
+        "samples": 30
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0008746044477447867,
+        "p95_seconds": 0.0008857233915477991,
+        "samples": 30
+      }
+    },
+    "high_channel_stress_8x10x7_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0032220204593613744,
+        "p95_seconds": 0.0033609081525355577,
+        "samples": 30
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0011984165757894516,
+        "p95_seconds": 0.0012464545434340835,
+        "samples": 30
+      }
+    },
+    "high_channel_stress_8x10x7_f64": {
+      "forward_backward": {
+        "median_seconds": 0.005001895478926599,
+        "p95_seconds": 0.005302505975123495,
+        "samples": 30
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.002092874958179891,
+        "p95_seconds": 0.0021536351647228,
+        "samples": 30
+      }
+    },
+    "representative_100x10x2_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0019192085601389408,
+        "p95_seconds": 0.0025686940643936383,
+        "samples": 30
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0005849370500072837,
+        "p95_seconds": 0.0005933439824730158,
+        "samples": 30
+      }
+    },
+    "representative_100x10x2_f64": {
+      "forward_backward": {
+        "median_seconds": 0.001968291588127613,
+        "p95_seconds": 0.0022321084165014323,
+        "samples": 30
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0006226459518074989,
+        "p95_seconds": 0.0007233526324853301,
+        "samples": 30
+      }
+    },
+    "traj_128x25x2_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0032357709715142846,
+        "p95_seconds": 0.0032713044318370523,
+        "samples": 30
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0009988124947994947,
+        "p95_seconds": 0.0010302227339707315,
+        "samples": 30
+      }
+    },
+    "traj_128x25x2_f64": {
+      "forward_backward": {
+        "median_seconds": 0.0032549374736845493,
+        "p95_seconds": 0.0033022497897036373,
+        "samples": 30
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0010483749210834503,
+        "p95_seconds": 0.0010682016727514565,
+        "samples": 30
+      }
+    }
+  },
+  "machine": "arm64",
+  "numpy": "2.4.6",
+  "platform": "macOS-26.7.1-arm64-arm-64bit",
+  "python": "3.11.10",
+  "repeats": 30,
+  "threads": 1,
+  "torch": "2.13.0"
+}

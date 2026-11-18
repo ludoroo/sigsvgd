@@ -1,16 +1,13 @@
 name: sigsvgd
 channels:
-  - pytorch
   - conda-forge
   - defaults
 dependencies:
   - black
-  - gpytorch=1.5.0
   - gym
   - matplotlib
   - moviepy=1.0.1
-  - python=3.9.7
-  - pytorch=1.9.0
+  - python=3.11
   - pyyaml
   - seaborn
   - tqdm=4.61.2
@@ -19,8 +16,8 @@ dependencies:
   - altair
   - pip
   - pip:
-      - signatory==1.2.6.1.9.0
+      - torch==2.13.0
+      - gpytorch==1.11
       - cython
-      - pytorch_lightning==2.2.0
-      - git+https://github.com/crispitagorico/sigkernel.git
-      - git+https://github.com/patrick-kidger/torchcubicspline.git
+      - pytorch_lightning>=2.6
+      # Git dependencies are installed with the project (see README.md).
