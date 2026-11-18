@@ -37,13 +37,16 @@ crashes. It never enables `KMP_DUPLICATE_LIB_OK`.
 
 Re-run `scripts/install_signatory.py` after any Python or PyTorch change; do not
 reuse an extension built against another PyTorch ABI. The PyTorch pin makes that
-upgrade an explicit maintenance step. The installer was validated on Apple Silicon;
-Linux and CUDA builds remain unverified. Apple MPS tensors are rejected because
+upgrade an explicit maintenance step. The installer source build and CPU smoke check were validated on Apple Silicon
+and Linux. Separate extension execution tests and benchmarks ran on an NVIDIA L4;
+the installer itself does not run a GPU smoke check.
+Linux L4 measurements show performance regressions and a fixed-tolerance float32
+stress gradient mismatch; see [Linux validation](docs/linux-cuda-validation.md). Apple MPS tensors are rejected because
 upstream Signatory crashes on that unsupported device. See [compiled validation results](docs/signatory-compiled-validation.md)
 for numerical and timing comparisons with the original stack.
 
 The robotics examples also use the Git dependencies declared in `setup.py` and
-resources downloaded above. GPU and full robotics experiments need separate
+resources downloaded above. Other GPUs and full robotics experiments need separate
 validation on their target hardware.
 
 ## Saved experiment files

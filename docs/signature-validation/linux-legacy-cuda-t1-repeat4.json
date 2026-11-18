@@ -1,0 +1,200 @@
+{
+  "backend": "signatory",
+  "cases": {
+    "channels_20x25x3_f32": {
+      "forward_backward": {
+        "median_seconds": 0.002159784999093972,
+        "p95_seconds": 0.0022552680420631073,
+        "samples": 200
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0005606199993053451,
+        "p95_seconds": 0.0005928520091401879,
+        "samples": 200
+      },
+      "peak_memory_forward": {
+        "baseline_allocated_bytes": 19456,
+        "peak_allocated_bytes": 51712,
+        "peak_reserved_bytes": 2097152
+      },
+      "peak_memory_forward_backward": {
+        "baseline_allocated_bytes": 19456,
+        "peak_allocated_bytes": 125952,
+        "peak_reserved_bytes": 2097152
+      }
+    },
+    "channels_20x25x3_f64": {
+      "forward_backward": {
+        "median_seconds": 0.0022004705024301074,
+        "p95_seconds": 0.0022760310079320335,
+        "samples": 200
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0005551395006477833,
+        "p95_seconds": 0.0005870284912816714,
+        "samples": 200
+      },
+      "peak_memory_forward": {
+        "baseline_allocated_bytes": 37888,
+        "peak_allocated_bytes": 99840,
+        "peak_reserved_bytes": 2097152
+      },
+      "peak_memory_forward_backward": {
+        "baseline_allocated_bytes": 37888,
+        "peak_allocated_bytes": 243712,
+        "peak_reserved_bytes": 2097152
+      }
+    },
+    "high_channel_stress_8x10x7_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0025374100005137734,
+        "p95_seconds": 0.0026092255080584436,
+        "samples": 200
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0006869895005365834,
+        "p95_seconds": 0.0007238800011691637,
+        "samples": 200
+      },
+      "peak_memory_forward": {
+        "baseline_allocated_bytes": 184320,
+        "peak_allocated_bytes": 635904,
+        "peak_reserved_bytes": 2097152
+      },
+      "peak_memory_forward_backward": {
+        "baseline_allocated_bytes": 184320,
+        "peak_allocated_bytes": 1455104,
+        "peak_reserved_bytes": 2097152
+      }
+    },
+    "high_channel_stress_8x10x7_f64": {
+      "forward_backward": {
+        "median_seconds": 0.0025426799984415993,
+        "p95_seconds": 0.002714656501484569,
+        "samples": 200
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0006900849984958768,
+        "p95_seconds": 0.000738705998082878,
+        "samples": 200
+      },
+      "peak_memory_forward": {
+        "baseline_allocated_bytes": 367616,
+        "peak_allocated_bytes": 1269760,
+        "peak_reserved_bytes": 4194304
+      },
+      "peak_memory_forward_backward": {
+        "baseline_allocated_bytes": 367616,
+        "peak_allocated_bytes": 2900480,
+        "peak_reserved_bytes": 4194304
+      }
+    },
+    "representative_100x10x2_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0025338814957649447,
+        "p95_seconds": 0.0026733234939456453,
+        "samples": 200
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0006865700052003376,
+        "p95_seconds": 0.0007212949982204008,
+        "samples": 200
+      },
+      "peak_memory_forward": {
+        "baseline_allocated_bytes": 40960,
+        "peak_allocated_bytes": 119296,
+        "peak_reserved_bytes": 2097152
+      },
+      "peak_memory_forward_backward": {
+        "baseline_allocated_bytes": 40960,
+        "peak_allocated_bytes": 295936,
+        "peak_reserved_bytes": 2097152
+      }
+    },
+    "representative_100x10x2_f64": {
+      "forward_backward": {
+        "median_seconds": 0.002536626998335123,
+        "p95_seconds": 0.002646295554586686,
+        "samples": 200
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0006874110040371306,
+        "p95_seconds": 0.0007174984581070021,
+        "samples": 200
+      },
+      "peak_memory_forward": {
+        "baseline_allocated_bytes": 80896,
+        "peak_allocated_bytes": 234496,
+        "peak_reserved_bytes": 2097152
+      },
+      "peak_memory_forward_backward": {
+        "baseline_allocated_bytes": 80896,
+        "peak_allocated_bytes": 582144,
+        "peak_reserved_bytes": 2097152
+      }
+    },
+    "traj_128x25x2_f32": {
+      "forward_backward": {
+        "median_seconds": 0.002291980003064964,
+        "p95_seconds": 0.0023590220014739313,
+        "samples": 200
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0005913359927944839,
+        "p95_seconds": 0.0006079840015445371,
+        "samples": 200
+      },
+      "peak_memory_forward": {
+        "baseline_allocated_bytes": 39936,
+        "peak_allocated_bytes": 158208,
+        "peak_reserved_bytes": 2097152
+      },
+      "peak_memory_forward_backward": {
+        "baseline_allocated_bytes": 39936,
+        "peak_allocated_bytes": 330240,
+        "peak_reserved_bytes": 2097152
+      }
+    },
+    "traj_128x25x2_f64": {
+      "forward_backward": {
+        "median_seconds": 0.002298956002050545,
+        "p95_seconds": 0.002404542499425588,
+        "samples": 200
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0005920754992985167,
+        "p95_seconds": 0.0006264559910050593,
+        "samples": 200
+      },
+      "peak_memory_forward": {
+        "baseline_allocated_bytes": 79872,
+        "peak_allocated_bytes": 315904,
+        "peak_reserved_bytes": 2097152
+      },
+      "peak_memory_forward_backward": {
+        "baseline_allocated_bytes": 79872,
+        "peak_allocated_bytes": 658944,
+        "peak_reserved_bytes": 2097152
+      }
+    }
+  },
+  "cuda_available": true,
+  "cuda_runtime": "11.1",
+  "device": "cuda",
+  "device_name": "NVIDIA L4",
+  "environment": {
+    "CUBLAS_WORKSPACE_CONFIG": null,
+    "CUDA_VISIBLE_DEVICES": null,
+    "OMP_NUM_THREADS": "1"
+  },
+  "machine": "x86_64",
+  "numpy": "1.26.4",
+  "platform": "Linux-6.8.0-1069-aws-x86_64-with-glibc2.35",
+  "python": "3.9.25",
+  "repeats": 200,
+  "signatory": "1.2.6.1.9.0",
+  "tf32_cudnn": false,
+  "tf32_matmul": false,
+  "threads": 1,
+  "torch": "1.9.0+cu111"
+}

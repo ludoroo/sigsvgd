@@ -1,0 +1,13 @@
+computed traj_128x25x2_f32
+computed traj_128x25x2_f64
+computed representative_100x10x2_f32
+computed representative_100x10x2_f64
+computed channels_20x25x3_f32
+computed channels_20x25x3_f64
+computed high_channel_stress_8x10x7_f32
+computed high_channel_stress_8x10x7_f64
+computed single_point
+computed constant_path
+computed noncontiguous_path
+wrote /tmp/sigsvgd-linux-validation/candidate-cpu-t4.npz and /tmp/sigsvgd-linux-validation/candidate-cpu-t4.json
+exit_code=0

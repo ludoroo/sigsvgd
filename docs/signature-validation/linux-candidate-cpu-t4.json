@@ -1,0 +1,136 @@
+{
+  "backend": "signatory",
+  "cases": {
+    "channels_20x25x3_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0006743900012224913,
+        "p95_seconds": 0.000753478004480712,
+        "samples": 50
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.00019053349387831986,
+        "p95_seconds": 0.0002114135008014273,
+        "samples": 50
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "channels_20x25x3_f64": {
+      "forward_backward": {
+        "median_seconds": 0.0006582444912055507,
+        "p95_seconds": 0.0006922385451616718,
+        "samples": 50
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.00017965800361707807,
+        "p95_seconds": 0.00019873950295732357,
+        "samples": 50
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "high_channel_stress_8x10x7_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0008011960017029196,
+        "p95_seconds": 0.0008387940528336912,
+        "samples": 50
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0001609820028534159,
+        "p95_seconds": 0.00018701750304899177,
+        "samples": 50
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "high_channel_stress_8x10x7_f64": {
+      "forward_backward": {
+        "median_seconds": 0.0007354730041697621,
+        "p95_seconds": 0.0007915979920653626,
+        "samples": 50
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.00016309750935761258,
+        "p95_seconds": 0.00019389000299270263,
+        "samples": 50
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "representative_100x10x2_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0008283970018965192,
+        "p95_seconds": 0.0009083704935619608,
+        "samples": 50
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0002263904971187003,
+        "p95_seconds": 0.00024404350260738284,
+        "samples": 50
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "representative_100x10x2_f64": {
+      "forward_backward": {
+        "median_seconds": 0.0008089710026979446,
+        "p95_seconds": 0.0008370914998522494,
+        "samples": 50
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.00021546400239458308,
+        "p95_seconds": 0.00023604501257068478,
+        "samples": 50
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "traj_128x25x2_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0013936670002294704,
+        "p95_seconds": 0.0014665850052551833,
+        "samples": 50
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.00036680699849966913,
+        "p95_seconds": 0.00038406105086323804,
+        "samples": 50
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "traj_128x25x2_f64": {
+      "forward_backward": {
+        "median_seconds": 0.0013795410050079226,
+        "p95_seconds": 0.0014716275458340532,
+        "samples": 50
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.00034389050415484235,
+        "p95_seconds": 0.00036722254735650496,
+        "samples": 50
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    }
+  },
+  "cuda_available": true,
+  "cuda_runtime": "13.0",
+  "device": "cpu",
+  "device_name": "x86_64",
+  "environment": {
+    "CUBLAS_WORKSPACE_CONFIG": null,
+    "CUDA_VISIBLE_DEVICES": null,
+    "OMP_NUM_THREADS": "4"
+  },
+  "machine": "x86_64",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.8.0-1069-aws-x86_64-with-glibc2.35",
+  "python": "3.11.17",
+  "repeats": 50,
+  "signatory": "1.2.6.1.9.0",
+  "tf32_cudnn": false,
+  "tf32_matmul": false,
+  "threads": 4,
+  "torch": "2.13.0+cu130"
+}

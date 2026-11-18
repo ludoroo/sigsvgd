@@ -1,0 +1,8 @@
+numpy==1.26.4
+packaging==26.3
+pip==26.0.1
+setuptools==69.5.1
+signatory==1.2.6.1.9.0
+torch==1.9.0+cu111
+typing_extensions==4.16.0
+wheel==0.48.0

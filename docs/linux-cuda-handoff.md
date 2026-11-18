@@ -1,5 +1,9 @@
 # Cloud-agent handoff: Linux and NVIDIA CUDA validation
 
+> Historical handoff: the subsequent [Linux/CUDA report](linux-cuda-validation.md)
+> supersedes the unverified-status statements below and records regressions and
+> fixed-tolerance failures.
+
 ## Task
 
 Work on repository `https://github.com/ludoroo/sigsvgd`, branch
