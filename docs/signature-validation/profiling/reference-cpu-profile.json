@@ -1,0 +1,1418 @@
+{
+  "python": "3.9.25",
+  "cuda_runtime": "11.1",
+  "cuda_available": true,
+  "device_name": "NVIDIA L4",
+  "tf32_matmul": false,
+  "tf32_cudnn": false,
+  "threads": 1,
+  "omp_num_threads": "1",
+  "torch": "1.9.0+cu111",
+  "device": "cpu",
+  "mode": "profile",
+  "affinity": [
+    2
+  ],
+  "warmups": 20,
+  "repeats": 100,
+  "inputs_sha256": "e57529bb1b2e4fe5dc56b6bba64c8fd9a7a8ecafebcd9b5723025e0d18ad0848",
+  "source_hashes": {
+    "path.py": "e0da46210f88ab37906139cdd6392dee463bb6dae67b21e54b4bd62c9aefe310",
+    "augment.py": "fa7125533030ab324a13f57678fda5c59f8a42a036330ab78e1e52d2382ffdae",
+    "signature_inversion_module.py": "5af5d25f5c245b37cc17db653d66ee59158340f37dba1b39b268c1f1977f3904",
+    "signature_module.py": "d1ca59b719b689a386fe063c3f3e42c1dc834de9083afa06c987cb564780cc2f",
+    "utility.py": "5e95ecbc65bb6977262f0fb2a7705900442341018cff095d3d4136125ce38a34",
+    "unstable.py": "53369301b0360e4aef71c691c37753a7f4caa04c38eb684c0a21c4ec29df7fb7",
+    "deprecated.py": "8de22e7cc3d390c0c4cdd01feb90030e0bda970d3853e2c71e69496599910a99",
+    "impl.py": "b8babe9357331cf4d8abdadc726053389825bbe966b113d4cec3b9d195e7d614",
+    "logsignature_module.py": "2240e4f1ca9171435bf940bc2ac8369e4c627fab9a2fbbd544edc4d5aa6a16c7",
+    "__init__.py": "bbc1c5d69842def282612326c364859127ada4beaf5ce77b59e2b1d11d08d458"
+  },
+  "cases": {
+    "traj_128x25x2_f32": {
+      "forward": {
+        "trace": "/tmp/signatory-1.9.0+cu111-cpu-traj_128x25x2_f32-forward.json",
+        "iterations": 3,
+        "cuda_activity_status": "unavailable or no kernels captured",
+        "kernel_count": 0,
+        "kernel_duration_us": 0,
+        "operators": [
+          {
+            "name": "aten::detach",
+            "count": 12,
+            "self_cpu_us": 20.0
+          },
+          {
+            "name": "detach",
+            "count": 12,
+            "self_cpu_us": 9.0
+          },
+          {
+            "name": "aten::cos",
+            "count": 3,
+            "self_cpu_us": 34.0
+          },
+          {
+            "name": "aten::sin",
+            "count": 3,
+            "self_cpu_us": 24.0
+          },
+          {
+            "name": "aten::cat",
+            "count": 3,
+            "self_cpu_us": 10.0
+          },
+          {
+            "name": "aten::_cat",
+            "count": 3,
+            "self_cpu_us": 74.0
+          },
+          {
+            "name": "aten::empty",
+            "count": 21,
+            "self_cpu_us": 20.0
+          },
+          {
+            "name": "aten::resize_",
+            "count": 3,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "aten::transpose",
+            "count": 6,
+            "self_cpu_us": 13.0
+          },
+          {
+            "name": "aten::as_strided",
+            "count": 117,
+            "self_cpu_us": 11.0
+          },
+          {
+            "name": "aten::zeros",
+            "count": 6,
+            "self_cpu_us": 49.0
+          },
+          {
+            "name": "aten::zero_",
+            "count": 6,
+            "self_cpu_us": 0.0
+          },
+          {
+            "name": "_SignatureFunction",
+            "count": 3,
+            "self_cpu_us": 806.0
+          },
+          {
+            "name": "aten::linspace",
+            "count": 6,
+            "self_cpu_us": 26.0
+          },
+          {
+            "name": "aten::reciprocal",
+            "count": 3,
+            "self_cpu_us": 7.0
+          },
+          {
+            "name": "aten::clone",
+            "count": 3,
+            "self_cpu_us": 10.0
+          },
+          {
+            "name": "aten::empty_strided",
+            "count": 3,
+            "self_cpu_us": 7.0
+          },
+          {
+            "name": "aten::copy_",
+            "count": 6,
+            "self_cpu_us": 32.0
+          },
+          {
+            "name": "aten::select",
+            "count": 84,
+            "self_cpu_us": 97.0
+          },
+          {
+            "name": "aten::sub_",
+            "count": 6,
+            "self_cpu_us": 22.0
+          },
+          {
+            "name": "aten::narrow",
+            "count": 15,
+            "self_cpu_us": 20.0
+          },
+          {
+            "name": "aten::slice",
+            "count": 15,
+            "self_cpu_us": 14.0
+          },
+          {
+            "name": "aten::view",
+            "count": 6,
+            "self_cpu_us": 9.0
+          },
+          {
+            "name": "aten::unsqueeze",
+            "count": 12,
+            "self_cpu_us": 15.0
+          },
+          {
+            "name": "aten::mul",
+            "count": 6,
+            "self_cpu_us": 44.0
+          },
+          {
+            "name": "aten::mul_",
+            "count": 6,
+            "self_cpu_us": 12.0
+          }
+        ]
+      },
+      "forward_backward": {
+        "trace": "/tmp/signatory-1.9.0+cu111-cpu-traj_128x25x2_f32-forward_backward.json",
+        "iterations": 3,
+        "cuda_activity_status": "unavailable or no kernels captured",
+        "kernel_count": 0,
+        "kernel_duration_us": 0,
+        "operators": [
+          {
+            "name": "aten::detach",
+            "count": 21,
+            "self_cpu_us": 32.0
+          },
+          {
+            "name": "detach",
+            "count": 21,
+            "self_cpu_us": 9.0
+          },
+          {
+            "name": "aten::cos",
+            "count": 6,
+            "self_cpu_us": 78.0
+          },
+          {
+            "name": "aten::sin",
+            "count": 6,
+            "self_cpu_us": 46.0
+          },
+          {
+            "name": "aten::cat",
+            "count": 3,
+            "self_cpu_us": 9.0
+          },
+          {
+            "name": "aten::_cat",
+            "count": 3,
+            "self_cpu_us": 37.0
+          },
+          {
+            "name": "aten::empty",
+            "count": 30,
+            "self_cpu_us": 17.0
+          },
+          {
+            "name": "aten::resize_",
+            "count": 6,
+            "self_cpu_us": 3.0
+          },
+          {
+            "name": "aten::transpose",
+            "count": 9,
+            "self_cpu_us": 18.0
+          },
+          {
+            "name": "aten::as_strided",
+            "count": 348,
+            "self_cpu_us": 26.0
+          },
+          {
+            "name": "aten::zeros",
+            "count": 6,
+            "self_cpu_us": 23.0
+          },
+          {
+            "name": "aten::zero_",
+            "count": 6,
+            "self_cpu_us": 4.0
+          },
+          {
+            "name": "_SignatureFunction",
+            "count": 3,
+            "self_cpu_us": 766.0
+          },
+          {
+            "name": "aten::linspace",
+            "count": 12,
+            "self_cpu_us": 39.0
+          },
+          {
+            "name": "aten::reciprocal",
+            "count": 6,
+            "self_cpu_us": 14.0
+          },
+          {
+            "name": "aten::clone",
+            "count": 12,
+            "self_cpu_us": 22.0
+          },
+          {
+            "name": "aten::empty_strided",
+            "count": 18,
+            "self_cpu_us": 35.0
+          },
+          {
+            "name": "aten::copy_",
+            "count": 18,
+            "self_cpu_us": 89.0
+          },
+          {
+            "name": "aten::select",
+            "count": 243,
+            "self_cpu_us": 382.0
+          },
+          {
+            "name": "aten::sub_",
+            "count": 9,
+            "self_cpu_us": 23.0
+          },
+          {
+            "name": "aten::narrow",
+            "count": 54,
+            "self_cpu_us": 70.0
+          },
+          {
+            "name": "aten::slice",
+            "count": 54,
+            "self_cpu_us": 35.0
+          },
+          {
+            "name": "aten::view",
+            "count": 12,
+            "self_cpu_us": 17.0
+          },
+          {
+            "name": "aten::unsqueeze",
+            "count": 36,
+            "self_cpu_us": 45.0
+          },
+          {
+            "name": "aten::mul",
+            "count": 18,
+            "self_cpu_us": 105.0
+          },
+          {
+            "name": "aten::mul_",
+            "count": 12,
+            "self_cpu_us": 32.0
+          },
+          {
+            "name": "aten::sum",
+            "count": 3,
+            "self_cpu_us": 18.0
+          },
+          {
+            "name": "aten::fill_",
+            "count": 6,
+            "self_cpu_us": 1.0
+          },
+          {
+            "name": "aten::ones_like",
+            "count": 3,
+            "self_cpu_us": 8.0
+          },
+          {
+            "name": "aten::empty_like",
+            "count": 9,
+            "self_cpu_us": 16.0
+          },
+          {
+            "name": "SumBackward0",
+            "count": 3,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "aten::expand",
+            "count": 3,
+            "self_cpu_us": 7.0
+          },
+          {
+            "name": "MulBackward0",
+            "count": 3,
+            "self_cpu_us": 9.0
+          },
+          {
+            "name": "aten::conj",
+            "count": 9,
+            "self_cpu_us": 3.0
+          },
+          {
+            "name": "_SignatureFunctionBackward",
+            "count": 3,
+            "self_cpu_us": 5634.0
+          },
+          {
+            "name": "aten::contiguous",
+            "count": 3,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "aten::neg",
+            "count": 78,
+            "self_cpu_us": 93.0
+          },
+          {
+            "name": "aten::bmm",
+            "count": 3,
+            "self_cpu_us": 17.0
+          },
+          {
+            "name": "aten::baddbmm_",
+            "count": 9,
+            "self_cpu_us": 37.0
+          },
+          {
+            "name": "aten::add_",
+            "count": 3,
+            "self_cpu_us": 10.0
+          },
+          {
+            "name": "TransposeBackward0",
+            "count": 3,
+            "self_cpu_us": 4.0
+          },
+          {
+            "name": "CatBackward",
+            "count": 3,
+            "self_cpu_us": 5.0
+          },
+          {
+            "name": "SinBackward",
+            "count": 3,
+            "self_cpu_us": 15.0
+          },
+          {
+            "name": "CosBackward",
+            "count": 3,
+            "self_cpu_us": 16.0
+          },
+          {
+            "name": "aten::add",
+            "count": 3,
+            "self_cpu_us": 8.0
+          }
+        ]
+      }
+    },
+    "representative_100x10x2_f32": {
+      "forward": {
+        "trace": "/tmp/signatory-1.9.0+cu111-cpu-representative_100x10x2_f32-forward.json",
+        "iterations": 3,
+        "cuda_activity_status": "unavailable or no kernels captured",
+        "kernel_count": 0,
+        "kernel_duration_us": 0,
+        "operators": [
+          {
+            "name": "aten::detach",
+            "count": 12,
+            "self_cpu_us": 15.0
+          },
+          {
+            "name": "detach",
+            "count": 12,
+            "self_cpu_us": 5.0
+          },
+          {
+            "name": "aten::transpose",
+            "count": 6,
+            "self_cpu_us": 8.0
+          },
+          {
+            "name": "aten::as_strided",
+            "count": 84,
+            "self_cpu_us": 4.0
+          },
+          {
+            "name": "aten::zeros",
+            "count": 6,
+            "self_cpu_us": 21.0
+          },
+          {
+            "name": "aten::empty",
+            "count": 18,
+            "self_cpu_us": 10.0
+          },
+          {
+            "name": "aten::zero_",
+            "count": 6,
+            "self_cpu_us": 2.0
+          },
+          {
+            "name": "_SignatureFunction",
+            "count": 3,
+            "self_cpu_us": 484.0
+          },
+          {
+            "name": "aten::linspace",
+            "count": 6,
+            "self_cpu_us": 20.0
+          },
+          {
+            "name": "aten::reciprocal",
+            "count": 3,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "aten::clone",
+            "count": 3,
+            "self_cpu_us": 7.0
+          },
+          {
+            "name": "aten::empty_strided",
+            "count": 3,
+            "self_cpu_us": 1.0
+          },
+          {
+            "name": "aten::copy_",
+            "count": 6,
+            "self_cpu_us": 12.0
+          },
+          {
+            "name": "aten::select",
+            "count": 42,
+            "self_cpu_us": 47.0
+          },
+          {
+            "name": "aten::sub_",
+            "count": 6,
+            "self_cpu_us": 17.0
+          },
+          {
+            "name": "aten::narrow",
+            "count": 18,
+            "self_cpu_us": 22.0
+          },
+          {
+            "name": "aten::slice",
+            "count": 18,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "aten::view",
+            "count": 9,
+            "self_cpu_us": 8.0
+          },
+          {
+            "name": "aten::unsqueeze",
+            "count": 18,
+            "self_cpu_us": 22.0
+          },
+          {
+            "name": "aten::mul",
+            "count": 9,
+            "self_cpu_us": 50.0
+          },
+          {
+            "name": "aten::mul_",
+            "count": 9,
+            "self_cpu_us": 18.0
+          }
+        ]
+      },
+      "forward_backward": {
+        "trace": "/tmp/signatory-1.9.0+cu111-cpu-representative_100x10x2_f32-forward_backward.json",
+        "iterations": 3,
+        "cuda_activity_status": "unavailable or no kernels captured",
+        "kernel_count": 0,
+        "kernel_duration_us": 0,
+        "operators": [
+          {
+            "name": "aten::detach",
+            "count": 21,
+            "self_cpu_us": 26.0
+          },
+          {
+            "name": "detach",
+            "count": 21,
+            "self_cpu_us": 8.0
+          },
+          {
+            "name": "aten::transpose",
+            "count": 9,
+            "self_cpu_us": 23.0
+          },
+          {
+            "name": "aten::as_strided",
+            "count": 243,
+            "self_cpu_us": 18.0
+          },
+          {
+            "name": "aten::zeros",
+            "count": 6,
+            "self_cpu_us": 15.0
+          },
+          {
+            "name": "aten::empty",
+            "count": 27,
+            "self_cpu_us": 20.0
+          },
+          {
+            "name": "aten::zero_",
+            "count": 6,
+            "self_cpu_us": 1.0
+          },
+          {
+            "name": "_SignatureFunction",
+            "count": 3,
+            "self_cpu_us": 468.0
+          },
+          {
+            "name": "aten::linspace",
+            "count": 12,
+            "self_cpu_us": 40.0
+          },
+          {
+            "name": "aten::reciprocal",
+            "count": 6,
+            "self_cpu_us": 14.0
+          },
+          {
+            "name": "aten::clone",
+            "count": 12,
+            "self_cpu_us": 21.0
+          },
+          {
+            "name": "aten::empty_strided",
+            "count": 18,
+            "self_cpu_us": 12.0
+          },
+          {
+            "name": "aten::copy_",
+            "count": 18,
+            "self_cpu_us": 50.0
+          },
+          {
+            "name": "aten::select",
+            "count": 114,
+            "self_cpu_us": 128.0
+          },
+          {
+            "name": "aten::sub_",
+            "count": 9,
+            "self_cpu_us": 21.0
+          },
+          {
+            "name": "aten::slice",
+            "count": 60,
+            "self_cpu_us": 37.0
+          },
+          {
+            "name": "aten::narrow",
+            "count": 60,
+            "self_cpu_us": 71.0
+          },
+          {
+            "name": "aten::view",
+            "count": 18,
+            "self_cpu_us": 16.0
+          },
+          {
+            "name": "aten::unsqueeze",
+            "count": 54,
+            "self_cpu_us": 70.0
+          },
+          {
+            "name": "aten::mul",
+            "count": 15,
+            "self_cpu_us": 80.0
+          },
+          {
+            "name": "aten::mul_",
+            "count": 18,
+            "self_cpu_us": 40.0
+          },
+          {
+            "name": "aten::sum",
+            "count": 3,
+            "self_cpu_us": 17.0
+          },
+          {
+            "name": "aten::fill_",
+            "count": 6,
+            "self_cpu_us": 1.0
+          },
+          {
+            "name": "aten::ones_like",
+            "count": 3,
+            "self_cpu_us": 4.0
+          },
+          {
+            "name": "aten::empty_like",
+            "count": 9,
+            "self_cpu_us": 11.0
+          },
+          {
+            "name": "SumBackward0",
+            "count": 3,
+            "self_cpu_us": 4.0
+          },
+          {
+            "name": "aten::expand",
+            "count": 3,
+            "self_cpu_us": 7.0
+          },
+          {
+            "name": "MulBackward0",
+            "count": 3,
+            "self_cpu_us": 10.0
+          },
+          {
+            "name": "aten::conj",
+            "count": 3,
+            "self_cpu_us": 1.0
+          },
+          {
+            "name": "_SignatureFunctionBackward",
+            "count": 3,
+            "self_cpu_us": 2946.0
+          },
+          {
+            "name": "aten::contiguous",
+            "count": 3,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "aten::neg",
+            "count": 30,
+            "self_cpu_us": 34.0
+          },
+          {
+            "name": "aten::bmm",
+            "count": 3,
+            "self_cpu_us": 24.0
+          },
+          {
+            "name": "aten::resize_",
+            "count": 3,
+            "self_cpu_us": 2.0
+          },
+          {
+            "name": "aten::baddbmm_",
+            "count": 15,
+            "self_cpu_us": 38.0
+          },
+          {
+            "name": "aten::add_",
+            "count": 3,
+            "self_cpu_us": 9.0
+          },
+          {
+            "name": "TransposeBackward0",
+            "count": 3,
+            "self_cpu_us": 19.0
+          }
+        ]
+      }
+    },
+    "channels_20x25x3_f32": {
+      "forward": {
+        "trace": "/tmp/signatory-1.9.0+cu111-cpu-channels_20x25x3_f32-forward.json",
+        "iterations": 3,
+        "cuda_activity_status": "unavailable or no kernels captured",
+        "kernel_count": 0,
+        "kernel_duration_us": 0,
+        "operators": [
+          {
+            "name": "aten::detach",
+            "count": 12,
+            "self_cpu_us": 17.0
+          },
+          {
+            "name": "detach",
+            "count": 12,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "aten::transpose",
+            "count": 6,
+            "self_cpu_us": 10.0
+          },
+          {
+            "name": "aten::as_strided",
+            "count": 117,
+            "self_cpu_us": 4.0
+          },
+          {
+            "name": "aten::zeros",
+            "count": 6,
+            "self_cpu_us": 16.0
+          },
+          {
+            "name": "aten::empty",
+            "count": 18,
+            "self_cpu_us": 29.0
+          },
+          {
+            "name": "aten::zero_",
+            "count": 6,
+            "self_cpu_us": 2.0
+          },
+          {
+            "name": "_SignatureFunction",
+            "count": 3,
+            "self_cpu_us": 373.0
+          },
+          {
+            "name": "aten::linspace",
+            "count": 6,
+            "self_cpu_us": 19.0
+          },
+          {
+            "name": "aten::reciprocal",
+            "count": 3,
+            "self_cpu_us": 7.0
+          },
+          {
+            "name": "aten::clone",
+            "count": 3,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "aten::empty_strided",
+            "count": 3,
+            "self_cpu_us": 3.0
+          },
+          {
+            "name": "aten::copy_",
+            "count": 6,
+            "self_cpu_us": 11.0
+          },
+          {
+            "name": "aten::select",
+            "count": 84,
+            "self_cpu_us": 96.0
+          },
+          {
+            "name": "aten::sub_",
+            "count": 6,
+            "self_cpu_us": 12.0
+          },
+          {
+            "name": "aten::slice",
+            "count": 15,
+            "self_cpu_us": 5.0
+          },
+          {
+            "name": "aten::narrow",
+            "count": 15,
+            "self_cpu_us": 18.0
+          },
+          {
+            "name": "aten::view",
+            "count": 6,
+            "self_cpu_us": 7.0
+          },
+          {
+            "name": "aten::unsqueeze",
+            "count": 12,
+            "self_cpu_us": 15.0
+          },
+          {
+            "name": "aten::mul",
+            "count": 6,
+            "self_cpu_us": 16.0
+          },
+          {
+            "name": "aten::mul_",
+            "count": 6,
+            "self_cpu_us": 8.0
+          }
+        ]
+      },
+      "forward_backward": {
+        "trace": "/tmp/signatory-1.9.0+cu111-cpu-channels_20x25x3_f32-forward_backward.json",
+        "iterations": 3,
+        "cuda_activity_status": "unavailable or no kernels captured",
+        "kernel_count": 0,
+        "kernel_duration_us": 0,
+        "operators": [
+          {
+            "name": "aten::detach",
+            "count": 21,
+            "self_cpu_us": 27.0
+          },
+          {
+            "name": "detach",
+            "count": 21,
+            "self_cpu_us": 9.0
+          },
+          {
+            "name": "aten::transpose",
+            "count": 9,
+            "self_cpu_us": 19.0
+          },
+          {
+            "name": "aten::as_strided",
+            "count": 342,
+            "self_cpu_us": 21.0
+          },
+          {
+            "name": "aten::zeros",
+            "count": 6,
+            "self_cpu_us": 13.0
+          },
+          {
+            "name": "aten::empty",
+            "count": 27,
+            "self_cpu_us": 44.0
+          },
+          {
+            "name": "aten::zero_",
+            "count": 6,
+            "self_cpu_us": 2.0
+          },
+          {
+            "name": "_SignatureFunction",
+            "count": 3,
+            "self_cpu_us": 392.0
+          },
+          {
+            "name": "aten::linspace",
+            "count": 12,
+            "self_cpu_us": 61.0
+          },
+          {
+            "name": "aten::reciprocal",
+            "count": 6,
+            "self_cpu_us": 11.0
+          },
+          {
+            "name": "aten::clone",
+            "count": 12,
+            "self_cpu_us": 21.0
+          },
+          {
+            "name": "aten::empty_strided",
+            "count": 18,
+            "self_cpu_us": 13.0
+          },
+          {
+            "name": "aten::copy_",
+            "count": 18,
+            "self_cpu_us": 59.0
+          },
+          {
+            "name": "aten::select",
+            "count": 243,
+            "self_cpu_us": 292.0
+          },
+          {
+            "name": "aten::sub_",
+            "count": 9,
+            "self_cpu_us": 17.0
+          },
+          {
+            "name": "aten::narrow",
+            "count": 48,
+            "self_cpu_us": 59.0
+          },
+          {
+            "name": "aten::slice",
+            "count": 48,
+            "self_cpu_us": 23.0
+          },
+          {
+            "name": "aten::view",
+            "count": 12,
+            "self_cpu_us": 16.0
+          },
+          {
+            "name": "aten::unsqueeze",
+            "count": 36,
+            "self_cpu_us": 45.0
+          },
+          {
+            "name": "aten::mul",
+            "count": 12,
+            "self_cpu_us": 46.0
+          },
+          {
+            "name": "aten::mul_",
+            "count": 12,
+            "self_cpu_us": 20.0
+          },
+          {
+            "name": "aten::sum",
+            "count": 3,
+            "self_cpu_us": 16.0
+          },
+          {
+            "name": "aten::fill_",
+            "count": 6,
+            "self_cpu_us": 3.0
+          },
+          {
+            "name": "aten::ones_like",
+            "count": 3,
+            "self_cpu_us": 3.0
+          },
+          {
+            "name": "aten::empty_like",
+            "count": 9,
+            "self_cpu_us": 9.0
+          },
+          {
+            "name": "SumBackward0",
+            "count": 3,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "aten::expand",
+            "count": 3,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "MulBackward0",
+            "count": 3,
+            "self_cpu_us": 8.0
+          },
+          {
+            "name": "aten::conj",
+            "count": 3,
+            "self_cpu_us": 1.0
+          },
+          {
+            "name": "_SignatureFunctionBackward",
+            "count": 3,
+            "self_cpu_us": 1494.0
+          },
+          {
+            "name": "aten::contiguous",
+            "count": 3,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "aten::neg",
+            "count": 75,
+            "self_cpu_us": 62.0
+          },
+          {
+            "name": "aten::bmm",
+            "count": 3,
+            "self_cpu_us": 14.0
+          },
+          {
+            "name": "aten::resize_",
+            "count": 3,
+            "self_cpu_us": 1.0
+          },
+          {
+            "name": "aten::baddbmm_",
+            "count": 9,
+            "self_cpu_us": 20.0
+          },
+          {
+            "name": "aten::add_",
+            "count": 3,
+            "self_cpu_us": 7.0
+          },
+          {
+            "name": "TransposeBackward0",
+            "count": 3,
+            "self_cpu_us": 6.0
+          }
+        ]
+      }
+    },
+    "high_channel_stress_8x10x7_f32": {
+      "forward": {
+        "trace": "/tmp/signatory-1.9.0+cu111-cpu-high_channel_stress_8x10x7_f32-forward.json",
+        "iterations": 3,
+        "cuda_activity_status": "unavailable or no kernels captured",
+        "kernel_count": 0,
+        "kernel_duration_us": 0,
+        "operators": [
+          {
+            "name": "aten::detach",
+            "count": 12,
+            "self_cpu_us": 15.0
+          },
+          {
+            "name": "detach",
+            "count": 12,
+            "self_cpu_us": 5.0
+          },
+          {
+            "name": "aten::transpose",
+            "count": 6,
+            "self_cpu_us": 14.0
+          },
+          {
+            "name": "aten::as_strided",
+            "count": 84,
+            "self_cpu_us": 3.0
+          },
+          {
+            "name": "aten::zeros",
+            "count": 6,
+            "self_cpu_us": 8.0
+          },
+          {
+            "name": "aten::empty",
+            "count": 18,
+            "self_cpu_us": 36.0
+          },
+          {
+            "name": "aten::zero_",
+            "count": 6,
+            "self_cpu_us": 2.0
+          },
+          {
+            "name": "_SignatureFunction",
+            "count": 3,
+            "self_cpu_us": 555.0
+          },
+          {
+            "name": "aten::linspace",
+            "count": 6,
+            "self_cpu_us": 19.0
+          },
+          {
+            "name": "aten::reciprocal",
+            "count": 3,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "aten::clone",
+            "count": 3,
+            "self_cpu_us": 5.0
+          },
+          {
+            "name": "aten::empty_strided",
+            "count": 3,
+            "self_cpu_us": 3.0
+          },
+          {
+            "name": "aten::copy_",
+            "count": 6,
+            "self_cpu_us": 9.0
+          },
+          {
+            "name": "aten::select",
+            "count": 42,
+            "self_cpu_us": 51.0
+          },
+          {
+            "name": "aten::sub_",
+            "count": 6,
+            "self_cpu_us": 13.0
+          },
+          {
+            "name": "aten::slice",
+            "count": 18,
+            "self_cpu_us": 9.0
+          },
+          {
+            "name": "aten::narrow",
+            "count": 18,
+            "self_cpu_us": 22.0
+          },
+          {
+            "name": "aten::view",
+            "count": 9,
+            "self_cpu_us": 9.0
+          },
+          {
+            "name": "aten::unsqueeze",
+            "count": 18,
+            "self_cpu_us": 23.0
+          },
+          {
+            "name": "aten::mul",
+            "count": 9,
+            "self_cpu_us": 26.0
+          },
+          {
+            "name": "aten::mul_",
+            "count": 9,
+            "self_cpu_us": 18.0
+          }
+        ]
+      },
+      "forward_backward": {
+        "trace": "/tmp/signatory-1.9.0+cu111-cpu-high_channel_stress_8x10x7_f32-forward_backward.json",
+        "iterations": 3,
+        "cuda_activity_status": "unavailable or no kernels captured",
+        "kernel_count": 0,
+        "kernel_duration_us": 0,
+        "operators": [
+          {
+            "name": "aten::detach",
+            "count": 21,
+            "self_cpu_us": 25.0
+          },
+          {
+            "name": "detach",
+            "count": 21,
+            "self_cpu_us": 16.0
+          },
+          {
+            "name": "aten::transpose",
+            "count": 9,
+            "self_cpu_us": 25.0
+          },
+          {
+            "name": "aten::as_strided",
+            "count": 315,
+            "self_cpu_us": 12.0
+          },
+          {
+            "name": "aten::zeros",
+            "count": 6,
+            "self_cpu_us": 16.0
+          },
+          {
+            "name": "aten::empty",
+            "count": 27,
+            "self_cpu_us": 25.0
+          },
+          {
+            "name": "aten::zero_",
+            "count": 6,
+            "self_cpu_us": 1.0
+          },
+          {
+            "name": "_SignatureFunction",
+            "count": 3,
+            "self_cpu_us": 538.0
+          },
+          {
+            "name": "aten::linspace",
+            "count": 12,
+            "self_cpu_us": 38.0
+          },
+          {
+            "name": "aten::reciprocal",
+            "count": 6,
+            "self_cpu_us": 13.0
+          },
+          {
+            "name": "aten::clone",
+            "count": 12,
+            "self_cpu_us": 19.0
+          },
+          {
+            "name": "aten::empty_strided",
+            "count": 18,
+            "self_cpu_us": 20.0
+          },
+          {
+            "name": "aten::copy_",
+            "count": 18,
+            "self_cpu_us": 124.0
+          },
+          {
+            "name": "aten::select",
+            "count": 186,
+            "self_cpu_us": 250.0
+          },
+          {
+            "name": "aten::sub_",
+            "count": 9,
+            "self_cpu_us": 19.0
+          },
+          {
+            "name": "aten::narrow",
+            "count": 60,
+            "self_cpu_us": 89.0
+          },
+          {
+            "name": "aten::slice",
+            "count": 60,
+            "self_cpu_us": 44.0
+          },
+          {
+            "name": "aten::view",
+            "count": 18,
+            "self_cpu_us": 24.0
+          },
+          {
+            "name": "aten::unsqueeze",
+            "count": 54,
+            "self_cpu_us": 69.0
+          },
+          {
+            "name": "aten::mul",
+            "count": 15,
+            "self_cpu_us": 97.0
+          },
+          {
+            "name": "aten::mul_",
+            "count": 18,
+            "self_cpu_us": 38.0
+          },
+          {
+            "name": "aten::sum",
+            "count": 3,
+            "self_cpu_us": 20.0
+          },
+          {
+            "name": "aten::fill_",
+            "count": 6,
+            "self_cpu_us": 1.0
+          },
+          {
+            "name": "aten::ones_like",
+            "count": 3,
+            "self_cpu_us": 4.0
+          },
+          {
+            "name": "aten::empty_like",
+            "count": 9,
+            "self_cpu_us": 16.0
+          },
+          {
+            "name": "SumBackward0",
+            "count": 3,
+            "self_cpu_us": 4.0
+          },
+          {
+            "name": "aten::expand",
+            "count": 3,
+            "self_cpu_us": 10.0
+          },
+          {
+            "name": "MulBackward0",
+            "count": 3,
+            "self_cpu_us": 9.0
+          },
+          {
+            "name": "aten::conj",
+            "count": 3,
+            "self_cpu_us": 0.0
+          },
+          {
+            "name": "_SignatureFunctionBackward",
+            "count": 3,
+            "self_cpu_us": 1597.0
+          },
+          {
+            "name": "aten::contiguous",
+            "count": 3,
+            "self_cpu_us": 5.0
+          },
+          {
+            "name": "aten::neg",
+            "count": 30,
+            "self_cpu_us": 34.0
+          },
+          {
+            "name": "aten::bmm",
+            "count": 3,
+            "self_cpu_us": 83.0
+          },
+          {
+            "name": "aten::resize_",
+            "count": 3,
+            "self_cpu_us": 1.0
+          },
+          {
+            "name": "aten::baddbmm_",
+            "count": 15,
+            "self_cpu_us": 105.0
+          },
+          {
+            "name": "aten::addmm_",
+            "count": 24,
+            "self_cpu_us": 26.0
+          },
+          {
+            "name": "aten::add_",
+            "count": 3,
+            "self_cpu_us": 6.0
+          },
+          {
+            "name": "TransposeBackward0",
+            "count": 3,
+            "self_cpu_us": 6.0
+          }
+        ]
+      }
+    }
+  },
+  "native_provenance": {
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/_impl.cpython-39-x86_64-linux-gnu.so": {
+      "sha256": "5027d2459ff863b36ed103e9a7bb6e6392ab4e2922730aedf07b09f75bc4035b",
+      "producers": [
+        "<2ccbc4>   DW_AT_producer    : (indirect string, offset: 0x1f2f66): GNU C++14 11.4.0 -mtune=generic -march=x86-64 -g -O3 -std=c++14 -fwrapv -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection",
+        "<49c1cd>   DW_AT_producer    : (indirect string, offset: 0x1f2f66): GNU C++14 11.4.0 -mtune=generic -march=x86-64 -g -O3 -std=c++14 -fwrapv -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection",
+        "<54f7dd>   DW_AT_producer    : (indirect string, offset: 0x1f2f66): GNU C++14 11.4.0 -mtune=generic -march=x86-64 -g -O3 -std=c++14 -fwrapv -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection",
+        "<8c62c6>   DW_AT_producer    : (indirect string, offset: 0x1f2f66): GNU C++14 11.4.0 -mtune=generic -march=x86-64 -g -O3 -std=c++14 -fwrapv -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection",
+        "<b86a97>   DW_AT_producer    : (indirect string, offset: 0x1f2f66): GNU C++14 11.4.0 -mtune=generic -march=x86-64 -g -O3 -std=c++14 -fwrapv -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection",
+        "<e>   DW_AT_producer    : (indirect string, offset: 0x1f2f66): GNU C++14 11.4.0 -mtune=generic -march=x86-64 -g -O3 -std=c++14 -fwrapv -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
+      ],
+      "ldd": "\tlinux-vdso.so.1 (0x00007fff7e0c1000)\n\tlibc10.so => not found\n\tlibtorch_cpu.so => not found\n\tlibtorch_python.so => not found\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000077102f000000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000077102f33d000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000077102f31b000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000077102ec00000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000077102f4a7000)\n"
+    }
+  },
+  "runtime_library_paths": [
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy.libs/libgfortran-040039e1.so.5.0.0",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy.libs/libquadmath-96973f99.so.0.0.0",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/core/_multiarray_tests.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/core/_multiarray_umath.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/fft/_pocketfft_internal.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/linalg/_umath_linalg.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_bounded_integers.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_common.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_generator.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_mt19937.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_pcg64.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_philox.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_sfc64.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/bit_generator.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/mtrand.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/_impl.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/_C.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libc10.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libc10_cuda.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libcudart-6d56b25a.so.11.0",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libgomp-7c85b1e2.so.1",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libnvToolsExt-24de1d56.so.1",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libshm.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_cuda_cpp.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_cuda_cu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_global_deps.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_python.so",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6",
+    "/usr/lib/x86_64-linux-gnu/libcuda.so.590.48.01",
+    "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6",
+    "/usr/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/usr/lib/x86_64-linux-gnu/librt.so.1",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30",
+    "/usr/lib/x86_64-linux-gnu/libutil.so.1",
+    "/usr/lib/x86_64-linux-gnu/libz.so.1.2.11"
+  ],
+  "trace_reprocessing": {
+    "reason": "Case-insensitive Kernel/kernel categories; original measurements unchanged",
+    "utc": "2026-11-18T22:51:03.246073+00:00",
+    "script_sha256": "ab7252ba553d7e9698334d7bef61d1b33e412fb434aec76820112dc4819ef118",
+    "trace_sha256": {
+      "/tmp/signatory-1.9.0+cu111-cpu-traj_128x25x2_f32-forward.json": "ba5be0865e0d2740fc98c38361964efc2937987e3f709ae734047d0ee9cc6275",
+      "/tmp/signatory-1.9.0+cu111-cpu-traj_128x25x2_f32-forward_backward.json": "8d5c0a48da0f12079f926adab5b3906cf408116ac8ce7cbcf3e6a3a4fac8ed98",
+      "/tmp/signatory-1.9.0+cu111-cpu-representative_100x10x2_f32-forward.json": "51392f64523182817573662fe0167539fb41262573a0593abd82bf217287bb92",
+      "/tmp/signatory-1.9.0+cu111-cpu-representative_100x10x2_f32-forward_backward.json": "b63bc6879ad23a69c524b1bbc0b692221be9626ad5b7962a9e3878b9173416a7",
+      "/tmp/signatory-1.9.0+cu111-cpu-channels_20x25x3_f32-forward.json": "f82d852f2793cc9374a0bc0c9dd8cb16d6ef2e3d440daef138ed3b7b3589ff75",
+      "/tmp/signatory-1.9.0+cu111-cpu-channels_20x25x3_f32-forward_backward.json": "5ad357f479c6850b2ae259bb0cb5dee443b652674172308e80b749da4a793218",
+      "/tmp/signatory-1.9.0+cu111-cpu-high_channel_stress_8x10x7_f32-forward.json": "3b2f156ef982db60377a8eb55c4b9283e18fb959c98c79250d8af5a814f4e40f",
+      "/tmp/signatory-1.9.0+cu111-cpu-high_channel_stress_8x10x7_f32-forward_backward.json": "745604d5ccd4bdd3f6df53b70e6c50a66e61ddd211812a3aeb5f2ba15ab9a7a4"
+    },
+    "pre_edit_source_hashes": "9141f65308b0c5e47461155afcd322c1f7aaf12568524467813c18884dbf67b8  scripts/profile_signatory_overhead.py\nc41abaf588c666acdc3e54cab2fc67b0268fc02954a74437bc0c9e65f2c41cdf  scripts/validate_path_signature.py\n",
+    "provenance_note": "Pre-edit hashes captured before category-fix edit, not at measurement time. Timing/split/microbench artifacts are untouched; measurement-time script hashes were not recorded."
+  }
+}

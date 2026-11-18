@@ -1,0 +1,167 @@
+{
+  "python": "3.9.25",
+  "cuda_runtime": "11.1",
+  "cuda_available": true,
+  "device_name": "NVIDIA L4",
+  "tf32_matmul": false,
+  "tf32_cudnn": false,
+  "threads": 1,
+  "omp_num_threads": "1",
+  "torch": "1.9.0+cu111",
+  "device": "cpu",
+  "mode": "split",
+  "affinity": [
+    2
+  ],
+  "warmups": 20,
+  "repeats": 100,
+  "inputs_sha256": "e57529bb1b2e4fe5dc56b6bba64c8fd9a7a8ecafebcd9b5723025e0d18ad0848",
+  "source_hashes": {
+    "path.py": "e0da46210f88ab37906139cdd6392dee463bb6dae67b21e54b4bd62c9aefe310",
+    "augment.py": "fa7125533030ab324a13f57678fda5c59f8a42a036330ab78e1e52d2382ffdae",
+    "signature_inversion_module.py": "5af5d25f5c245b37cc17db653d66ee59158340f37dba1b39b268c1f1977f3904",
+    "signature_module.py": "d1ca59b719b689a386fe063c3f3e42c1dc834de9083afa06c987cb564780cc2f",
+    "utility.py": "5e95ecbc65bb6977262f0fb2a7705900442341018cff095d3d4136125ce38a34",
+    "unstable.py": "53369301b0360e4aef71c691c37753a7f4caa04c38eb684c0a21c4ec29df7fb7",
+    "deprecated.py": "8de22e7cc3d390c0c4cdd01feb90030e0bda970d3853e2c71e69496599910a99",
+    "impl.py": "b8babe9357331cf4d8abdadc726053389825bbe966b113d4cec3b9d195e7d614",
+    "logsignature_module.py": "2240e4f1ca9171435bf940bc2ac8369e4c627fab9a2fbbd544edc4d5aa6a16c7",
+    "__init__.py": "bbc1c5d69842def282612326c364859127ada4beaf5ce77b59e2b1d11d08d458"
+  },
+  "cases": {
+    "traj_128x25x2_f32": {
+      "forward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.1768608344718814,
+          "signature_forward": 25.962413899833336
+        },
+        "host_total_ms": 32.61610699701123,
+        "residual_host_ms": 6.4768322627060115
+      },
+      "forward_backward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.27192794368602335,
+          "signature_forward": 27.338892890838906,
+          "signature_backward": 188.3835940680001
+        },
+        "host_total_ms": 238.13430301379412,
+        "residual_host_ms": 22.1398881112691
+      }
+    },
+    "representative_100x10x2_f32": {
+      "forward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.1416688901372254,
+          "signature_forward": 16.699500993127003
+        },
+        "host_total_ms": 19.69740999629721,
+        "residual_host_ms": 2.8562401130329818
+      },
+      "forward_backward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.21566805662587285,
+          "signature_forward": 17.76450197212398,
+          "signature_backward": 98.62923991749994
+        },
+        "host_total_ms": 129.51675298972987,
+        "residual_host_ms": 12.907343043480068
+      }
+    },
+    "channels_20x25x3_f32": {
+      "forward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.13584003318101168,
+          "signature_forward": 12.021762086078525
+        },
+        "host_total_ms": 14.926837000530213,
+        "residual_host_ms": 2.769234881270677
+      },
+      "forward_backward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.20560724078677595,
+          "signature_forward": 13.079203083179891,
+          "signature_backward": 46.95095866918564
+        },
+        "host_total_ms": 72.58211099542677,
+        "residual_host_ms": 12.346342002274469
+      }
+    },
+    "high_channel_stress_8x10x7_f32": {
+      "forward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.136686023324728,
+          "signature_forward": 17.948710912605748
+        },
+        "host_total_ms": 20.98214699071832,
+        "residual_host_ms": 2.8967500547878444
+      },
+      "forward_backward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.21428297623060644,
+          "signature_forward": 18.794242874719203,
+          "signature_backward": 58.9727429614868
+        },
+        "host_total_ms": 91.38796097249724,
+        "residual_host_ms": 13.40669216006063
+      }
+    }
+  },
+  "native_provenance": {
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/_impl.cpython-39-x86_64-linux-gnu.so": {
+      "sha256": "5027d2459ff863b36ed103e9a7bb6e6392ab4e2922730aedf07b09f75bc4035b",
+      "producers": [
+        "<2ccbc4>   DW_AT_producer    : (indirect string, offset: 0x1f2f66): GNU C++14 11.4.0 -mtune=generic -march=x86-64 -g -O3 -std=c++14 -fwrapv -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection",
+        "<49c1cd>   DW_AT_producer    : (indirect string, offset: 0x1f2f66): GNU C++14 11.4.0 -mtune=generic -march=x86-64 -g -O3 -std=c++14 -fwrapv -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection",
+        "<54f7dd>   DW_AT_producer    : (indirect string, offset: 0x1f2f66): GNU C++14 11.4.0 -mtune=generic -march=x86-64 -g -O3 -std=c++14 -fwrapv -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection",
+        "<8c62c6>   DW_AT_producer    : (indirect string, offset: 0x1f2f66): GNU C++14 11.4.0 -mtune=generic -march=x86-64 -g -O3 -std=c++14 -fwrapv -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection",
+        "<b86a97>   DW_AT_producer    : (indirect string, offset: 0x1f2f66): GNU C++14 11.4.0 -mtune=generic -march=x86-64 -g -O3 -std=c++14 -fwrapv -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection",
+        "<e>   DW_AT_producer    : (indirect string, offset: 0x1f2f66): GNU C++14 11.4.0 -mtune=generic -march=x86-64 -g -O3 -std=c++14 -fwrapv -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
+      ],
+      "ldd": "\tlinux-vdso.so.1 (0x00007fffa79c4000)\n\tlibc10.so => not found\n\tlibtorch_cpu.so => not found\n\tlibtorch_python.so => not found\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000072aeb9a00000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000072aeb9919000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000072aeb9ce6000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000072aeb9600000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000072aeb9d8b000)\n"
+    }
+  },
+  "runtime_library_paths": [
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy.libs/libgfortran-040039e1.so.5.0.0",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy.libs/libquadmath-96973f99.so.0.0.0",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/core/_multiarray_tests.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/core/_multiarray_umath.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/fft/_pocketfft_internal.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/linalg/_umath_linalg.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_bounded_integers.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_common.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_generator.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_mt19937.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_pcg64.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_philox.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/_sfc64.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/bit_generator.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/numpy/random/mtrand.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/_impl.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/_C.cpython-39-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libc10.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libc10_cuda.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libcudart-6d56b25a.so.11.0",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libgomp-7c85b1e2.so.1",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libnvToolsExt-24de1d56.so.1",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libshm.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_cuda_cpp.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_cuda_cu.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_global_deps.so",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_python.so",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6",
+    "/usr/lib/x86_64-linux-gnu/libcuda.so.590.48.01",
+    "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6",
+    "/usr/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/usr/lib/x86_64-linux-gnu/librt.so.1",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30",
+    "/usr/lib/x86_64-linux-gnu/libutil.so.1",
+    "/usr/lib/x86_64-linux-gnu/libz.so.1.2.11"
+  ]
+}

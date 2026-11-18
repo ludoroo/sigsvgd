@@ -80,3 +80,7 @@ Across float32 workloads, candidate/reference forward+backward median ratios in
 repeat3 are 1.07–1.21× (CPU t1), 1.17–1.26× (CPU t4), and 1.39–1.42× (CUDA).
 In reverse-order repeat4 they are 1.08–1.21×, 1.11–1.25×, and 1.36–1.40×.
 The regression persists across order reversal.
+
+## Profiling follow-up
+
+See [bounded installed-runtime profiling](linux-cuda-profiling.md) for overhead attribution, raw summaries and limitations.
