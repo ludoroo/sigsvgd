@@ -31,6 +31,7 @@ def parse_args():
         type=Path,
         help="reuse exact inputs/cotangents from a reference .npz",
     )
+    parser.add_argument("--device", choices=("cpu", "cuda"), default="cpu")
     parser.add_argument("--threads", type=int, default=1)
     parser.add_argument("--repeats", type=int, default=15)
     parser.add_argument(
@@ -133,6 +134,21 @@ def make_cases():
 
 
 def run_backend(args, torch):
+    device = torch.device(args.device)
+    if device.type == "cuda" and not torch.cuda.is_available():
+        raise RuntimeError("CUDA requested but unavailable")
+    torch.backends.cuda.matmul.allow_tf32 = False
+    torch.backends.cudnn.allow_tf32 = False
+
+    def synchronize():
+        if device.type == "cuda":
+            torch.cuda.synchronize(device)
+
+    if device.type == "cuda":
+        smoke = torch.ones(2, device=device) + 1
+        synchronize()
+        del smoke
+
     if args.backend == "local":
         signature = load_local_signature(torch)
     else:
@@ -157,7 +173,11 @@ def run_backend(args, torch):
         name, depth = case["name"], case["depth"]
         x_np = case["input"]
         # Preserve the deliberately non-contiguous edge input's strides.
-        x = torch.from_numpy(x_np).requires_grad_(True)
+        x = torch.from_numpy(x_np).to(device).requires_grad_(True)
+        if name == "noncontiguous_path":
+            expected_strides = tuple(stride // x_np.itemsize for stride in x_np.strides)
+            assert not x.is_contiguous(), "noncontiguous input became contiguous on transfer"
+            assert x.stride() == expected_strides, "input strides changed on device transfer"
 
         def path_from(value):
             return (
@@ -166,7 +186,7 @@ def run_backend(args, torch):
                 else value
             )
 
-        cotangent = torch.from_numpy(case["cotangent"].copy())
+        cotangent = torch.from_numpy(case["cotangent"].copy()).to(device)
         with torch.enable_grad():
             output = signature(path_from(x), depth)
             gradient = torch.autograd.grad((output * cotangent).sum(), x)[0]
@@ -204,10 +224,13 @@ def run_backend(args, torch):
             def measure(fn):
                 for _ in range(3):
                     fn()
+                synchronize()
                 samples = []
                 for _ in range(args.repeats):
+                    synchronize()
                     start = time.perf_counter()
                     fn()
+                    synchronize()
                     samples.append(time.perf_counter() - start)
                 return {
                     "median_seconds": statistics.median(samples),
@@ -215,7 +238,23 @@ def run_backend(args, torch):
                     "samples": len(samples),
                 }
 
+            def memory(fn):
+                if device.type != "cuda":
+                    return None
+                synchronize()
+                torch.cuda.reset_peak_memory_stats(device)
+                baseline = torch.cuda.memory_allocated(device)
+                fn()
+                synchronize()
+                return {
+                    "baseline_allocated_bytes": baseline,
+                    "peak_allocated_bytes": torch.cuda.max_memory_allocated(device),
+                    "peak_reserved_bytes": torch.cuda.max_memory_reserved(device),
+                }
+
             timing_cases[name] = {
+                "peak_memory_forward": memory(forward),
+                "peak_memory_forward_backward": memory(forward_backward),
                 "forward_no_grad": measure(forward),
                 "forward_backward": measure(forward_backward),
             }
@@ -225,6 +264,14 @@ def run_backend(args, torch):
     np.savez_compressed(args.output, **arrays)
     timing_path = args.output.with_suffix(".json")
     timing = {
+        "device": str(device),
+        "device_name": torch.cuda.get_device_name(device) if device.type == "cuda" else platform.processor(),
+        "cuda_runtime": torch.version.cuda,
+        "cuda_available": torch.cuda.is_available(),
+        "tf32_matmul": torch.backends.cuda.matmul.allow_tf32,
+        "tf32_cudnn": torch.backends.cudnn.allow_tf32,
+        "environment": {key: os.environ.get(key) for key in
+                        ("CUDA_VISIBLE_DEVICES", "OMP_NUM_THREADS", "CUBLAS_WORKSPACE_CONFIG")},
         "backend": args.backend,
         "threads": args.threads,
         "repeats": args.repeats,
@@ -304,7 +351,10 @@ def main():
 
     if args.compare:
         return compare_files(*args.compare)
-    run_backend(args, torch)
+    try:
+        run_backend(args, torch)
+    except RuntimeError as exc:
+        sys.exit("validate_path_signature: " + str(exc))
     return 0
 
 

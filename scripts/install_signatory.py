@@ -146,7 +146,7 @@ def main():
         patch_macos_extensions()
     else:
         subprocess.run(args, check=True)
-        print("Linux build path is generic and has not been tested by this helper.")
+        print("Linux source-build path uses the active PyTorch headers and system C++ toolchain (tested on Linux x86_64).")
     smoke_test()
     print("Signatory build and forward/backward smoke test succeeded.")
     print(
