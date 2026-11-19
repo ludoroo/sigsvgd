@@ -1,0 +1,20 @@
+--- /tmp/sigsvgd-guard-experiment/control/signatory-1.2.6.1.9.0/src/signature.cpp	2021-07-19 03:47:16.000000000 -0700
++++ /tmp/sigsvgd-autograd-guard/patched/signatory-1.2.6.1.9.0/src/signature.cpp	2026-11-18 18:09:30.859355266 -0800
+@@ -447,6 +447,7 @@
+         grad_signature = grad_signature.detach();
+         signature = signature.detach();
+         path_increments = path_increments.detach();
++        at::AutoDispatchBelowAutograd autograd_only_guard;
+ 
+         torch::TensorOptions opts = signature.options();
+         torch::Tensor reciprocals = misc::make_reciprocals(depth, opts);
+--- /tmp/sigsvgd-guard-experiment/control/signatory-1.2.6.1.9.0/src/tensor_algebra_ops.cpp	2021-07-19 03:47:16.000000000 -0700
++++ /tmp/sigsvgd-autograd-guard/patched/signatory-1.2.6.1.9.0/src/tensor_algebra_ops.cpp	2026-11-18 18:09:30.859355266 -0800
+@@ -1130,6 +1130,7 @@
+         for (auto& elem : sigtensors) {
+             elem = elem.detach();
+         }
++        at::AutoDispatchBelowAutograd autograd_only_guard;
+ 
+         // Allocate memory for the output gradients
+         std::vector<torch::Tensor> grad_sigtensors;
