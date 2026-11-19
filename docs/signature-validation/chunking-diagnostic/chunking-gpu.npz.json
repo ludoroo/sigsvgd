@@ -1,0 +1,22 @@
+{
+  "torch": "2.13.0+cu130",
+  "signatory": "1.2.6",
+  "device": "NVIDIA L4",
+  "tf32": false,
+  "configs": [
+    [
+      "cuda_default",
+      "cuda",
+      1,
+      false,
+      false
+    ],
+    [
+      "cuda_nochunk",
+      "cuda",
+      1,
+      true,
+      false
+    ]
+  ]
+}

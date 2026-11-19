@@ -1,0 +1,29 @@
+{
+  "torch": "2.13.0+cu130",
+  "signatory": "1.2.6",
+  "device": "cpu",
+  "tf32": false,
+  "configs": [
+    [
+      "cpu_t1",
+      "cpu",
+      1,
+      false,
+      false
+    ],
+    [
+      "cpu_t24",
+      "cpu",
+      24,
+      false,
+      false
+    ],
+    [
+      "cpu_f64",
+      "cpu",
+      1,
+      false,
+      true
+    ]
+  ]
+}
