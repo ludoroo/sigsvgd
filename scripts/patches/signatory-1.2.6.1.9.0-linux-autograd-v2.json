@@ -1,0 +1,30 @@
+{
+  "src/signature.cpp": {
+    "sha256": "d6aa88c804644eaf99a5e5281f0de410bfe84eafddc32b314635d24c909b55b9",
+    "patched_sha256": "7da7fb0914fe3cc784f92a27e6a8259841eb60222a4989070de8cde1987803da",
+    "edits": [
+      {
+        "old": "        // that in any case one cannot autograd through this function)\n        path = path.detach();\n        basepoint_value = basepoint_value.detach();\n        initial_value = initial_value.detach();\n",
+        "new": "        // that in any case one cannot autograd through this function)\n        path = path.detach();\n        basepoint_value = basepoint_value.detach();\n        initial_value = initial_value.detach();\n        at::AutoDispatchBelowADInplaceOrView autograd_only_guard;\n"
+      },
+      {
+        "old": "\n        grad_signature = grad_signature.detach();\n        signature = signature.detach();\n        path_increments = path_increments.detach();\n",
+        "new": "\n        grad_signature = grad_signature.detach();\n        signature = signature.detach();\n        path_increments = path_increments.detach();\n        at::AutoDispatchBelowADInplaceOrView autograd_only_guard;\n"
+      }
+    ]
+  },
+  "src/tensor_algebra_ops.cpp": {
+    "sha256": "ccc1478744445663f2d2ea4b7cc3aa85b347d41ccb09ebbff045457664cd870a",
+    "patched_sha256": "3537607dc83382b728f89a262ac0e286a4eb42bb71d6175f62273ad5b7eaca69",
+    "edits": [
+      {
+        "old": "\n        // Actually do the computation\n\n        torch::Tensor out;\n",
+        "new": "\n        // Actually do the computation\n\n        torch::Tensor out;\n        at::AutoDispatchBelowADInplaceOrView autograd_only_guard;\n"
+      },
+      {
+        "old": "        grad_out = grad_out.detach();\n        for (auto& elem : sigtensors) {\n            elem = elem.detach();\n        }\n",
+        "new": "        grad_out = grad_out.detach();\n        for (auto& elem : sigtensors) {\n            elem = elem.detach();\n        }\n        at::AutoDispatchBelowADInplaceOrView autograd_only_guard;\n"
+      }
+    ]
+  }
+}

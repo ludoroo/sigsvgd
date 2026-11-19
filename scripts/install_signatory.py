@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """Build Signatory 1.2.6.1.9.0 for this Python and installed PyTorch."""
 
+import hashlib
+import json
+import tarfile
+import urllib.request
+import urllib.error
 import importlib.metadata
 import os
 import platform
@@ -110,6 +115,61 @@ def smoke_test():
     subprocess.run([sys.executable, "-c", code], check=True)
 
 
+SDIST_SHA256 = "c9ab17df6286688c1c7b12c0e906031a1fe7681dfca551876c1ff616e12807d8"
+SDIST_URL = f"https://files.pythonhosted.org/packages/source/s/signatory/signatory-{VERSION}.tar.gz"
+
+
+def patch_linux_source(source, manifest=None):
+    """Apply exact versioned edits atomically after checking every input/output."""
+    manifest = Path(manifest) if manifest is not None else Path(__file__).parent / "patches" / f"signatory-{VERSION}-linux-autograd-v2.json"
+    changes = []
+    for relative, spec in json.loads(manifest.read_text()).items():
+        path = Path(source) / relative
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != spec["sha256"]:
+            raise RuntimeError(f"Unexpected Signatory source: {relative}")
+        text = path.read_text()
+        for edit in spec["edits"]:
+            if text.count(edit["old"]) != 1:
+                raise RuntimeError(f"Signatory patch conflict: {relative}")
+            text = text.replace(edit["old"], edit["new"])
+        if hashlib.sha256(text.encode()).hexdigest() != spec["patched_sha256"]:
+            raise RuntimeError(f"Signatory patch output mismatch: {relative}")
+        changes.append((path, text))
+    for path, text in changes:
+        path.write_text(text)
+
+
+def build_linux_source(args):
+    if not args or args[-1] != f"signatory=={VERSION}":
+        raise RuntimeError("Unexpected Signatory source-build arguments")
+    if not hasattr(tarfile, "data_filter"):
+        raise RuntimeError("Safe extraction requires Python >=3.10.12 or >=3.11.4")
+    try:
+        _build_linux_source(args)
+    except (OSError, urllib.error.URLError, tarfile.TarError) as exc:
+        raise RuntimeError(f"Signatory source download/extraction/build file error: {exc}") from exc
+
+
+def _build_linux_source(args):
+    with tempfile.TemporaryDirectory(prefix="signatory-linux-") as tempdir:
+        archive = Path(tempdir) / "source.tar.gz"
+        urllib.request.urlretrieve(SDIST_URL, archive)
+        if hashlib.sha256(archive.read_bytes()).hexdigest() != SDIST_SHA256:
+            raise RuntimeError("Signatory source archive SHA256 mismatch")
+        with tarfile.open(archive) as package:
+            package.extractall(tempdir, filter="data")
+        source = Path(tempdir) / f"signatory-{VERSION}"
+        # Reviewed invariant: detached inputs are read-only; in-place writes
+        # target private allocations only. No returned shared storage requires
+        # shared version tracking (the basepoint gradient's private base is
+        # unreachable). Python callers create views outside this guard.
+        # Raw OpenMP workers do not inherit this thread-local guard.
+        # Any future source change requires a new alias/mutation review;
+        # whole-file hashes deliberately fail closed rather than adapting.
+        patch_linux_source(source)
+        subprocess.run([*args[:-1], str(source)], check=True)
+
+
 def main():
     import argparse
 
@@ -144,9 +204,12 @@ def main():
             env = mac_build_environment(tempdir)
             subprocess.run(args, env=env, check=True)
         patch_macos_extensions()
+    elif sys.platform.startswith("linux"):
+        build_linux_source(args)
+        print("Linux detached-native dispatcher guards applied to verified fresh source.")
     else:
         subprocess.run(args, check=True)
-        print("Linux source-build path uses the active PyTorch headers and system C++ toolchain (tested on Linux x86_64).")
+        print("Unpatched source-build path uses the active PyTorch headers and system toolchain.")
     smoke_test()
     print("Signatory build and forward/backward smoke test succeeded.")
     print(
