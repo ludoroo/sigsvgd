@@ -1,0 +1,17 @@
+{
+  "torch": "2.13.0+cu126",
+  "cuda": "12.6",
+  "native": {
+    "/tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/torch/lib/libc10.so": "9baa4bf6ff269adb30de6f7cf896c11f08def4d6a12517b443db5cce64ce46b6",
+    "/tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/torch/lib/libc10_cuda.so": "598ccb098cf51f1b4b452f4a7089a9cdd19fb7788be3509bce63061adb845854",
+    "/tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/torch/lib/libcaffe2_nvrtc.so": "f873d3a7a68909d58413c8701e8b7b7c5ca69fd5162d62735200537d89ba8d8a",
+    "/tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/torch/lib/libshm.so": "091d0b794c8d8ff2635d1266039ba418730f7298d51bc4b613fe3698bd3d9e12",
+    "/tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/torch/lib/libtorch.so": "1fd669794a03498ce7a5556d3c597c5f01d9590a572e76b3a83b2309f269d942",
+    "/tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so": "d432889f1137653106d84c38c4d723bd037edfbe072165d33c8b798fe6e88770",
+    "/tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so": "66d916674a414a3f8facd58901630be77b82c68a8cdc0175269b624c41bd5310",
+    "/tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/torch/lib/libtorch_cuda_linalg.so": "3358a5140359791fc7d9fefcf74a2e6443aa8e29d08eb6155b89f16a3c292ea7",
+    "/tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/torch/lib/libtorch_global_deps.so": "2eaab74d60647976a45caf4e0643d8b1b568f7202aa1cc861fdff70cea8dbf48",
+    "/tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/torch/lib/libtorch_nvshmem.so": "fb91aa992d0bb5fce79f37efa86bd96edeffc6ad92e20a34588b75f99db95a1b",
+    "/tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/torch/lib/libtorch_python.so": "1f56898343f675bf7628dd6d1c726f29b1a289fd3ca030467a243180952d1242"
+  }
+}

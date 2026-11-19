@@ -1,3 +1,8 @@
+> Historical decision superseded: four broad v2 Linux guards are now adopted
+> after independent public alias/storage/mutation review. Private version/view/
+> base fields are not preserved. Original rejection evidence below is retained;
+> see [current status](linux-cuda-optimization.md).
+
 # Autograd-only dispatcher guard: REJECTED
 
 The isolated narrower guard fails this experiment's conservative exact-metadata

@@ -1,0 +1,13 @@
+{
+  "cases": 253,
+  "differences": 2470,
+  "private_metadata": 2278,
+  "version_number_only_error_messages": 192,
+  "public_differences": [],
+  "fields": {
+    "version": 2150,
+    "message": 192,
+    "view": 64,
+    "base": 64
+  }
+}

@@ -1,0 +1,155 @@
+.....s..........................................                         [100%]
+=============================== warnings summary ===============================
+../.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/jit/_script.py:1488
+../.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/jit/_script.py:1488
+  /home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/jit/_script.py:1488: DeprecationWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+tests/test_signatory_guard_contract.py::test_saved_gradient_alias_mutation_and_external_versions[False-cpu]
+tests/test_signatory_guard_contract.py::test_saved_gradient_alias_mutation_and_external_versions[False-cuda]
+tests/test_signatory_guard_contract.py::test_saved_gradient_alias_mutation_and_external_versions[True-cpu]
+tests/test_signatory_guard_contract.py::test_saved_gradient_alias_mutation_and_external_versions[True-cuda]
+  /home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/autograd/graph.py:979: UserWarning: Error detected in MulBackward0. Traceback of forward call that caused the error:
+    File "<frozen runpy>", line 198, in _run_module_as_main
+    File "<frozen runpy>", line 88, in _run_code
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pytest/__main__.py", line 9, in <module>
+      raise SystemExit(_console_main())
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/config/__init__.py", line 286, in _console_main
+      code = _main(prog=_get_prog_name(sys.argv))
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/config/__init__.py", line 262, in _main
+      ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_caller.py", line 197, in __call__
+      return self._hookexec(
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_manager.py", line 183, in _hookexec
+      return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_execution.py", line 147, in _multicall
+      res = hook_impl.function(*args)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/main.py", line 380, in pytest_cmdline_main
+      return wrap_session(config, _main)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/main.py", line 333, in wrap_session
+      session.exitstatus = doit(config, session) or 0
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/main.py", line 387, in _main
+      config.hook.pytest_runtestloop(session=session)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_caller.py", line 197, in __call__
+      return self._hookexec(
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_manager.py", line 183, in _hookexec
+      return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_execution.py", line 147, in _multicall
+      res = hook_impl.function(*args)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/main.py", line 411, in pytest_runtestloop
+      item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_caller.py", line 197, in __call__
+      return self._hookexec(
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_manager.py", line 183, in _hookexec
+      return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_execution.py", line 147, in _multicall
+      res = hook_impl.function(*args)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/runner.py", line 118, in pytest_runtest_protocol
+      runtestprotocol(item, nextitem=nextitem)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/runner.py", line 139, in runtestprotocol
+      reports.append(call_and_report(item, "call", log))
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/runner.py", line 249, in call_and_report
+      call = CallInfo.from_call(
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/runner.py", line 361, in from_call
+      result: TResult | None = func()
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/runner.py", line 250, in <lambda>
+      lambda: runtest_hook(item=item, **kwds),
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_caller.py", line 197, in __call__
+      return self._hookexec(
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_manager.py", line 183, in _hookexec
+      return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_execution.py", line 147, in _multicall
+      res = hook_impl.function(*args)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/runner.py", line 184, in pytest_runtest_call
+      item.runtest()
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/python.py", line 1798, in runtest
+      self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_caller.py", line 197, in __call__
+      return self._hookexec(
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_manager.py", line 183, in _hookexec
+      return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_execution.py", line 147, in _multicall
+      res = hook_impl.function(*args)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/python.py", line 187, in pytest_pyfunc_call
+      result = testfunction(**testargs)
+    File "/home/coder/sigsvgd/tests/test_signatory_guard_contract.py", line 23, in test_saved_gradient_alias_mutation_and_external_versions
+      loss = (z*g).sum()
+   (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/python_anomaly_mode.cpp:122.)
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+
+tests/test_signatory_guard_contract.py::test_output_mutation_is_detected_before_backward[cpu]
+tests/test_signatory_guard_contract.py::test_output_mutation_is_detected_before_backward[cuda]
+  /home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/autograd/graph.py:979: UserWarning: Error detected in _SignatureFunctionBackward. Traceback of forward call that caused the error:
+    File "<frozen runpy>", line 198, in _run_module_as_main
+    File "<frozen runpy>", line 88, in _run_code
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pytest/__main__.py", line 9, in <module>
+      raise SystemExit(_console_main())
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/config/__init__.py", line 286, in _console_main
+      code = _main(prog=_get_prog_name(sys.argv))
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/config/__init__.py", line 262, in _main
+      ret: ExitCode | int = config.hook.pytest_cmdline_main(config=config)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_caller.py", line 197, in __call__
+      return self._hookexec(
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_manager.py", line 183, in _hookexec
+      return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_execution.py", line 147, in _multicall
+      res = hook_impl.function(*args)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/main.py", line 380, in pytest_cmdline_main
+      return wrap_session(config, _main)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/main.py", line 333, in wrap_session
+      session.exitstatus = doit(config, session) or 0
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/main.py", line 387, in _main
+      config.hook.pytest_runtestloop(session=session)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_caller.py", line 197, in __call__
+      return self._hookexec(
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_manager.py", line 183, in _hookexec
+      return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_execution.py", line 147, in _multicall
+      res = hook_impl.function(*args)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/main.py", line 411, in pytest_runtestloop
+      item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_caller.py", line 197, in __call__
+      return self._hookexec(
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_manager.py", line 183, in _hookexec
+      return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_execution.py", line 147, in _multicall
+      res = hook_impl.function(*args)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/runner.py", line 118, in pytest_runtest_protocol
+      runtestprotocol(item, nextitem=nextitem)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/runner.py", line 139, in runtestprotocol
+      reports.append(call_and_report(item, "call", log))
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/runner.py", line 249, in call_and_report
+      call = CallInfo.from_call(
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/runner.py", line 361, in from_call
+      result: TResult | None = func()
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/runner.py", line 250, in <lambda>
+      lambda: runtest_hook(item=item, **kwds),
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_caller.py", line 197, in __call__
+      return self._hookexec(
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_manager.py", line 183, in _hookexec
+      return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_execution.py", line 147, in _multicall
+      res = hook_impl.function(*args)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/runner.py", line 184, in pytest_runtest_call
+      item.runtest()
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/python.py", line 1798, in runtest
+      self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_caller.py", line 197, in __call__
+      return self._hookexec(
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_manager.py", line 183, in _hookexec
+      return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/pluggy/_execution.py", line 147, in _multicall
+      res = hook_impl.function(*args)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/_pytest/python.py", line 187, in pytest_pyfunc_call
+      result = testfunction(**testargs)
+    File "/home/coder/sigsvgd/tests/test_signatory_guard_contract.py", line 55, in test_output_mutation_is_detected_before_backward
+      y = signatory.signature(x,3,basepoint=True)
+    File "/tmp/sigsvgd-optimization-e2-fresh/overlay/signatory/signature_module.py", line 252, in signature
+      result = _SignatureFunction.apply(path.transpose(0, 1), depth, stream, basepoint, inverse, initial, scalar_term)
+    File "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/autograd/function.py", line 625, in apply
+      return super().apply(*args, **kwargs)  # type: ignore[misc]
+   (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/python_anomaly_mode.cpp:122.)
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+47 passed, 1 skipped, 8 warnings in 30.93s

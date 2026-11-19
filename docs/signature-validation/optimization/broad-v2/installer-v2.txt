@@ -1,0 +1,46 @@
+Processing /tmp/signatory-linux-l91ng39r/signatory-1.2.6.1.9.0
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+  /tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/setuptools/dist.py:759: BuildBackendWarning: License classifiers are deprecated.
+  !!
+  
+          ********************************************************************************
+          Please consider removing the following classifiers in favor of a SPDX license expression:
+  
+          License :: OSI Approved :: Apache Software License
+  
+          See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+          ********************************************************************************
+  
+  !!
+    self._finalize_license_expression()
+Building wheels for collected packages: signatory
+  Building wheel for signatory (pyproject.toml): started
+  Building wheel for signatory (pyproject.toml): still running...
+  Building wheel for signatory (pyproject.toml): still running...
+  Building wheel for signatory (pyproject.toml): finished with status 'done'
+  /tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/setuptools/dist.py:759: BuildBackendWarning: License classifiers are deprecated.
+  !!
+  
+          ********************************************************************************
+          Please consider removing the following classifiers in favor of a SPDX license expression:
+  
+          License :: OSI Approved :: Apache Software License
+  
+          See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+          ********************************************************************************
+  
+  !!
+    self._finalize_license_expression()
+  Created wheel for signatory: filename=signatory-1.2.6.1.9.0-cp311-cp311-linux_x86_64.whl size=14298699 sha256=662233b4675c09f8ca6447b78dcde1c2bcce81adb8be72d4f88218784ef6dc35
+  Stored in directory: /tmp/pip-ephem-wheel-cache-mga8wh82/wheels/95/2b/09/29aa22482a4dc40308209654fb95592fab1f37716b933a6a18
+Successfully built signatory
+Installing collected packages: signatory
+  Attempting uninstall: signatory
+    Found existing installation: signatory 1.2.6.1.9.0
+    Uninstalling signatory-1.2.6.1.9.0:
+      Successfully uninstalled signatory-1.2.6.1.9.0
+Successfully installed signatory-1.2.6.1.9.0
+Linux detached-native dispatcher guards applied to verified fresh source.
+Signatory build and forward/backward smoke test succeeded.
+Rebuild after changing Python or PyTorch; the extension targets their current ABI.

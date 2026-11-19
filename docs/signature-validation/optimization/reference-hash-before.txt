@@ -1,0 +1,11 @@
+/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/__init__.py bbc1c5d69842def282612326c364859127ada4beaf5ce77b59e2b1d11d08d458
+/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/_impl.cpython-39-x86_64-linux-gnu.so 5027d2459ff863b36ed103e9a7bb6e6392ab4e2922730aedf07b09f75bc4035b
+/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/augment.py fa7125533030ab324a13f57678fda5c59f8a42a036330ab78e1e52d2382ffdae
+/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/deprecated.py 8de22e7cc3d390c0c4cdd01feb90030e0bda970d3853e2c71e69496599910a99
+/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/impl.py b8babe9357331cf4d8abdadc726053389825bbe966b113d4cec3b9d195e7d614
+/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/logsignature_module.py 2240e4f1ca9171435bf940bc2ac8369e4c627fab9a2fbbd544edc4d5aa6a16c7
+/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/path.py e0da46210f88ab37906139cdd6392dee463bb6dae67b21e54b4bd62c9aefe310
+/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/signature_inversion_module.py 5af5d25f5c245b37cc17db653d66ee59158340f37dba1b39b268c1f1977f3904
+/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/signature_module.py d1ca59b719b689a386fe063c3f3e42c1dc834de9083afa06c987cb564780cc2f
+/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/unstable.py 53369301b0360e4aef71c691c37753a7f4caa04c38eb684c0a21c4ec29df7fb7
+/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/signatory/utility.py 5e95ecbc65bb6977262f0fb2a7705900442341018cff095d3d4136125ce38a34

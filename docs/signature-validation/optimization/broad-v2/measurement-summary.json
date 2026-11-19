@@ -1,0 +1,1202 @@
+[
+  {
+    "family": "cuda",
+    "case": "traj_128x25x2_f32",
+    "phase": "forward",
+    "metric": "median_ms",
+    "ABBA": [
+      0.6068720103939995,
+      0.6233029998838902,
+      0.6380384875228629,
+      0.6107475055614486
+    ],
+    "candidate_over_reference": 1.0359077453000554,
+    "reference_drift": 0.006386017316786452,
+    "candidate_drift": 0.02364097018900546
+  },
+  {
+    "family": "cuda",
+    "case": "traj_128x25x2_f32",
+    "phase": "forward",
+    "metric": "p95_ms",
+    "ABBA": [
+      0.6564894792973064,
+      0.6423130049370229,
+      0.6782304946682416,
+      0.6428620472433977
+    ],
+    "candidate_over_reference": 1.0163096534168705,
+    "reference_drift": -0.02075803570911028,
+    "candidate_drift": 0.055918982575699605
+  },
+  {
+    "family": "cuda",
+    "case": "traj_128x25x2_f32",
+    "phase": "forward_backward",
+    "metric": "median_ms",
+    "ABBA": [
+      2.3194185050670058,
+      2.526128009776585,
+      2.51823800499551,
+      2.331629002583213
+    ],
+    "candidate_over_reference": 1.084565575061302,
+    "reference_drift": 0.005264464989622297,
+    "candidate_drift": -0.003123359050111074
+  },
+  {
+    "family": "cuda",
+    "case": "traj_128x25x2_f32",
+    "phase": "forward_backward",
+    "metric": "p95_ms",
+    "ABBA": [
+      2.4418155415332876,
+      2.7888865093700588,
+      2.621776000887621,
+      2.3817185356165282
+    ],
+    "candidate_over_reference": 1.1217216305963766,
+    "reference_drift": -0.024611607590564688,
+    "candidate_drift": -0.059920153767814566
+  },
+  {
+    "family": "cuda",
+    "case": "representative_100x10x2_f32",
+    "phase": "forward",
+    "metric": "median_ms",
+    "ABBA": [
+      0.7100819930201396,
+      0.7337420101976022,
+      0.7431035046465695,
+      0.7026059902273118
+    ],
+    "candidate_over_reference": 1.0454152172012086,
+    "reference_drift": -0.010528365549773544,
+    "candidate_drift": 0.01275856407137721
+  },
+  {
+    "family": "cuda",
+    "case": "representative_100x10x2_f32",
+    "phase": "forward",
+    "metric": "p95_ms",
+    "ABBA": [
+      0.7306350395083427,
+      0.763928543892689,
+      0.7907405466539784,
+      0.7447130570653825
+    ],
+    "candidate_over_reference": 1.0537642568266794,
+    "reference_drift": 0.019268193825624724,
+    "candidate_drift": 0.03509752708632363
+  },
+  {
+    "family": "cuda",
+    "case": "representative_100x10x2_f32",
+    "phase": "forward_backward",
+    "metric": "median_ms",
+    "ABBA": [
+      2.573954494437203,
+      2.844247006578371,
+      2.810129997669719,
+      2.567424497101456
+    ],
+    "candidate_over_reference": 1.099778291690554,
+    "reference_drift": -0.0025369513524265974,
+    "candidate_drift": -0.01199509354487971
+  },
+  {
+    "family": "cuda",
+    "case": "representative_100x10x2_f32",
+    "phase": "forward_backward",
+    "metric": "p95_ms",
+    "ABBA": [
+      2.6990365426172502,
+      2.8866445529274642,
+      3.062303501064889,
+      2.6299775403458625
+    ],
+    "candidate_over_reference": 1.1163318320008147,
+    "reference_drift": -0.02558653844842773,
+    "candidate_drift": 0.06085229577686735
+  },
+  {
+    "family": "cuda",
+    "case": "channels_20x25x3_f32",
+    "phase": "forward",
+    "metric": "median_ms",
+    "ABBA": [
+      0.5741655040765181,
+      0.6087019864935428,
+      0.6059419974917546,
+      0.5777310143457726
+    ],
+    "candidate_over_reference": 1.0544731792825883,
+    "reference_drift": 0.006209899835395438,
+    "candidate_drift": -0.004534220460963634
+  },
+  {
+    "family": "cuda",
+    "case": "channels_20x25x3_f32",
+    "phase": "forward",
+    "metric": "p95_ms",
+    "ABBA": [
+      0.6102470040787011,
+      1.0323296111891975,
+      0.6259959904127754,
+      0.608852508594282
+    ],
+    "candidate_over_reference": 1.3602873140076546,
+    "reference_drift": -0.002285132864395578,
+    "candidate_drift": -0.3936084137975505
+  },
+  {
+    "family": "cuda",
+    "case": "channels_20x25x3_f32",
+    "phase": "forward_backward",
+    "metric": "median_ms",
+    "ABBA": [
+      2.177516507799737,
+      2.4248480040114373,
+      2.417662995867431,
+      2.200497983722016
+    ],
+    "candidate_over_reference": 1.1060975264601423,
+    "reference_drift": 0.010553984706871633,
+    "candidate_drift": -0.002963075678195093
+  },
+  {
+    "family": "cuda",
+    "case": "channels_20x25x3_f32",
+    "phase": "forward_backward",
+    "metric": "p95_ms",
+    "ABBA": [
+      2.239801562973298,
+      2.5131356058409438,
+      2.4735849918215536,
+      2.2610410160268657
+    ],
+    "candidate_over_reference": 1.1079526800002564,
+    "reference_drift": 0.009482738741092955,
+    "candidate_drift": -0.015737556671223007
+  },
+  {
+    "family": "cuda",
+    "case": "high_channel_stress_8x10x7_f32",
+    "phase": "forward",
+    "metric": "median_ms",
+    "ABBA": [
+      0.7064810051815584,
+      0.732807515305467,
+      0.7456035236828029,
+      0.7040664931992069
+    ],
+    "candidate_over_reference": 1.0481114891100145,
+    "reference_drift": -0.0034176601559599007,
+    "candidate_drift": 0.017461622745506444
+  },
+  {
+    "family": "cuda",
+    "case": "high_channel_stress_8x10x7_f32",
+    "phase": "forward",
+    "metric": "p95_ms",
+    "ABBA": [
+      0.7312039873795584,
+      0.7893496571341527,
+      0.8414842086494898,
+      0.748745515011251
+    ],
+    "candidate_over_reference": 1.1019523727999398,
+    "reference_drift": 0.02398992337905148,
+    "candidate_drift": 0.06604747470800088
+  },
+  {
+    "family": "cuda",
+    "case": "high_channel_stress_8x10x7_f32",
+    "phase": "forward_backward",
+    "metric": "median_ms",
+    "ABBA": [
+      2.5731640052981675,
+      2.854562015272677,
+      2.810075500747189,
+      2.5414935080334544
+    ],
+    "candidate_over_reference": 1.107530172109216,
+    "reference_drift": -0.012307997935422366,
+    "candidate_drift": -0.015584357350610367
+  },
+  {
+    "family": "cuda",
+    "case": "high_channel_stress_8x10x7_f32",
+    "phase": "forward_backward",
+    "metric": "p95_ms",
+    "ABBA": [
+      2.6231074691168033,
+      2.9068950141663663,
+      2.861284489335958,
+      2.6475431586732157
+    ],
+    "candidate_over_reference": 1.094396102274174,
+    "reference_drift": 0.009315550294490826,
+    "candidate_drift": -0.01569046168097976
+  },
+  {
+    "family": "cpu1",
+    "case": "channels_20x25x3_f32",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0008280475012725219,
+      0.0007844755018595606,
+      0.0007900404889369383,
+      0.0008200919983210042
+    ],
+    "candidate_over_reference": 0.9553293220536341,
+    "reference_drift": -0.009607544179883298,
+    "candidate_drift": 0.00709389530225768
+  },
+  {
+    "family": "cpu1",
+    "case": "channels_20x25x3_f32",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0008474525238852948,
+      0.0007995189836947248,
+      0.0008035245191422291,
+      0.0008439520504907704
+    ],
+    "candidate_over_reference": 0.9477587604540407,
+    "reference_drift": -0.004130583479149741,
+    "candidate_drift": 0.005009931632885101
+  },
+  {
+    "family": "cpu1",
+    "case": "channels_20x25x3_f32",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.00017812348960433155,
+      0.00016365248302463442,
+      0.00016367800708394498,
+      0.00017808300617616624
+    ],
+    "candidate_over_reference": 0.9189346460157974,
+    "reference_drift": -0.00022727731336980028,
+    "candidate_drift": 0.00015596499875103476
+  },
+  {
+    "family": "cpu1",
+    "case": "channels_20x25x3_f32",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.00020117999520152807,
+      0.0001871184475021437,
+      0.00018778705125441775,
+      0.0002051950170425698
+    ],
+    "candidate_over_reference": 0.9225604120840147,
+    "reference_drift": 0.019957361252642247,
+    "candidate_drift": 0.003573157864439791
+  },
+  {
+    "family": "cpu1",
+    "case": "channels_20x25x3_f64",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0008079559920588508,
+      0.0007648989994777367,
+      0.0007754849939374253,
+      0.0007993255130713806
+    ],
+    "candidate_over_reference": 0.958378472282832,
+    "reference_drift": -0.010681867666428091,
+    "candidate_drift": 0.013839728469924317
+  },
+  {
+    "family": "cpu1",
+    "case": "channels_20x25x3_f64",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0008233520071371459,
+      0.0007794274803018198,
+      0.0007910415486549027,
+      0.0008185040045646019
+    ],
+    "candidate_over_reference": 0.956520558297293,
+    "reference_drift": -0.005888128686782235,
+    "candidate_drift": 0.014900768380126328
+  },
+  {
+    "family": "cpu1",
+    "case": "channels_20x25x3_f64",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.00017279300664085895,
+      0.00015652200090698898,
+      0.00015794200589880347,
+      0.00016992801101878285
+    ],
+    "candidate_over_reference": 0.9175509834593467,
+    "reference_drift": -0.01658050680274825,
+    "candidate_drift": 0.009072238941401745
+  },
+  {
+    "family": "cpu1",
+    "case": "channels_20x25x3_f64",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.00019727499893633648,
+      0.00017853351746452973,
+      0.000181916008295957,
+      0.00019252753554610536
+    ],
+    "candidate_over_reference": 0.9246977478970771,
+    "reference_drift": -0.024065205504135823,
+    "candidate_drift": 0.0189459709272759
+  },
+  {
+    "family": "cpu1",
+    "case": "high_channel_stress_8x10x7_f32",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.000979154501692392,
+      0.0009529230010230094,
+      0.0009436875116080046,
+      0.0009819990082178265
+    ],
+    "candidate_over_reference": 0.9670892681510898,
+    "reference_drift": 0.0029050640328140975,
+    "candidate_drift": -0.009691747817074492
+  },
+  {
+    "family": "cpu1",
+    "case": "high_channel_stress_8x10x7_f32",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.000993804499739781,
+      0.0009699769463622943,
+      0.0009610499982954934,
+      0.0009988364909077063
+    ],
+    "candidate_over_reference": 0.9690792037909054,
+    "reference_drift": 0.005063361223704321,
+    "candidate_drift": -0.00920325797461441
+  },
+  {
+    "family": "cpu1",
+    "case": "high_channel_stress_8x10x7_f32",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.00023328101087827235,
+      0.00022085050295572728,
+      0.00022008999076206237,
+      0.00023128050088416785
+    ],
+    "candidate_over_reference": 0.9491541648488317,
+    "reference_drift": -0.008575537231139574,
+    "candidate_drift": -0.003443561067268064
+  },
+  {
+    "family": "cpu1",
+    "case": "high_channel_stress_8x10x7_f32",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.00025795649271458386,
+      0.0002419920143438503,
+      0.00023734253481961785,
+      0.0002680650562979281
+    ],
+    "candidate_over_reference": 0.9112450812391847,
+    "reference_drift": 0.039187087236950635,
+    "candidate_drift": -0.019213359320303547
+  },
+  {
+    "family": "cpu1",
+    "case": "high_channel_stress_8x10x7_f64",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.000997245020698756,
+      0.0009652680018916726,
+      0.0009797990060178563,
+      0.0009992400009650737
+    ],
+    "candidate_over_reference": 0.9742457302727721,
+    "reference_drift": 0.0020004915792106726,
+    "candidate_drift": 0.015053854574798686
+  },
+  {
+    "family": "cpu1",
+    "case": "high_channel_stress_8x10x7_f64",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0010112724979990163,
+      0.0009787300165044143,
+      0.0010011024889536202,
+      0.0010241485651931725
+    ],
+    "candidate_over_reference": 0.9726894062661543,
+    "reference_drift": 0.012732539666246101,
+    "candidate_drift": 0.0228586761128573
+  },
+  {
+    "family": "cpu1",
+    "case": "high_channel_stress_8x10x7_f64",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.00022555000032298267,
+      0.0002202500036219135,
+      0.00021228000696282834,
+      0.0002223149931523949
+    ],
+    "candidate_over_reference": 0.9657598090629095,
+    "reference_drift": -0.014342749571958802,
+    "candidate_drift": -0.03618613633608214
+  },
+  {
+    "family": "cpu1",
+    "case": "high_channel_stress_8x10x7_f64",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.00024456100654788313,
+      0.0002631204915815033,
+      0.00023034901387291028,
+      0.00024127557553583757
+    ],
+    "candidate_over_reference": 1.0157108864424245,
+    "reference_drift": -0.013433993662445576,
+    "candidate_drift": -0.12454931773507216
+  },
+  {
+    "family": "cpu1",
+    "case": "representative_100x10x2_f32",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0013615510106319562,
+      0.0013105039979564026,
+      0.001311323998379521,
+      0.0013437909947242588
+    ],
+    "candidate_over_reference": 0.9691299625500418,
+    "reference_drift": -0.013043959256035631,
+    "candidate_drift": 0.0006257137898069143
+  },
+  {
+    "family": "cpu1",
+    "case": "representative_100x10x2_f32",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.001384986007178668,
+      0.0013340405057533644,
+      0.0013412515399977565,
+      0.0013864580090739763
+    ],
+    "candidate_over_reference": 0.9653061833695152,
+    "reference_drift": 0.0010628279908089233,
+    "candidate_drift": 0.005405408766295139
+  },
+  {
+    "family": "cpu1",
+    "case": "representative_100x10x2_f32",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.00021558950538747013,
+      0.00020268950902391225,
+      0.00020110400510020554,
+      0.00021109399676788598
+    ],
+    "candidate_over_reference": 0.9463537073366759,
+    "reference_drift": -0.020852168158670525,
+    "candidate_drift": -0.007822328503048759
+  },
+  {
+    "family": "cpu1",
+    "case": "representative_100x10x2_f32",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.00023701854952378197,
+      0.00022218256926862524,
+      0.00022272349742706864,
+      0.00023387854889733717
+    ],
+    "candidate_over_reference": 0.9448052837603563,
+    "reference_drift": -0.01324791090298083,
+    "candidate_drift": 0.002434611140847087
+  },
+  {
+    "family": "cpu1",
+    "case": "representative_100x10x2_f64",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0013056339957984164,
+      0.001297938491916284,
+      0.0012802370183635503,
+      0.0012921980087412521
+    ],
+    "candidate_over_reference": 0.9924335006168663,
+    "reference_drift": -0.010290776052402029,
+    "candidate_drift": -0.013638145153241465
+  },
+  {
+    "family": "cpu1",
+    "case": "representative_100x10x2_f64",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0013313821196788921,
+      0.0013299244979862123,
+      0.0013243005421827547,
+      0.001322134508518502
+    ],
+    "candidate_over_reference": 1.0002669709939047,
+    "reference_drift": -0.006945873032019101,
+    "candidate_drift": -0.004228778259196986
+  },
+  {
+    "family": "cpu1",
+    "case": "representative_100x10x2_f64",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0002021489926846698,
+      0.00018641349743120372,
+      0.0001883329969132319,
+      0.00019752400112338364
+    ],
+    "candidate_over_reference": 0.9376327651610382,
+    "reference_drift": -0.0228791224723075,
+    "candidate_drift": 0.01029699838519793
+  },
+  {
+    "family": "cpu1",
+    "case": "representative_100x10x2_f64",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.00022258205572143198,
+      0.00020581545686582103,
+      0.00020732804405270143,
+      0.00022165499976836144
+    ],
+    "candidate_over_reference": 0.9300068416467673,
+    "reference_drift": -0.004165007597156767,
+    "candidate_drift": 0.0073492399935080055
+  },
+  {
+    "family": "cpu1",
+    "case": "traj_128x25x2_f32",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0025209675077348948,
+      0.0024439145054202527,
+      0.0024516505072824657,
+      0.002492797517334111
+    ],
+    "candidate_over_reference": 0.9764248998955309,
+    "reference_drift": -0.011174277460678006,
+    "candidate_drift": 0.0031654142749493186
+  },
+  {
+    "family": "cpu1",
+    "case": "traj_128x25x2_f32",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.002576825981668662,
+      0.0024712794940569436,
+      0.0024881154808099382,
+      0.002575195481767878
+    ],
+    "candidate_over_reference": 0.9626114739744949,
+    "reference_drift": -0.0006327551462083081,
+    "candidate_drift": 0.006812659917052155
+  },
+  {
+    "family": "cpu1",
+    "case": "traj_128x25x2_f32",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.00034626499109435827,
+      0.00032534949423279613,
+      0.00032874949101824313,
+      0.0003419155109440908
+    ],
+    "candidate_over_reference": 0.9504759046696943,
+    "reference_drift": -0.012561131682764404,
+    "candidate_drift": 0.010450290674231644
+  },
+  {
+    "family": "cpu1",
+    "case": "traj_128x25x2_f32",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0003676129854284227,
+      0.0003491879993816838,
+      0.0003448254879913293,
+      0.0003651969993370585
+    ],
+    "candidate_over_reference": 0.9470579028683894,
+    "reference_drift": -0.006572091267528446,
+    "candidate_drift": -0.012493302742589418
+  },
+  {
+    "family": "cpu1",
+    "case": "traj_128x25x2_f64",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0024648710095789284,
+      0.0023721969919279218,
+      0.0023904480040073395,
+      0.0024221445055445656
+    ],
+    "candidate_over_reference": 0.9745508237484919,
+    "reference_drift": -0.01733417443278773,
+    "candidate_drift": 0.007693716896835401
+  },
+  {
+    "family": "cpu1",
+    "case": "traj_128x25x2_f64",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0024901845608837903,
+      0.0024295450522913596,
+      0.0024410024954704566,
+      0.002453754450834822
+    ],
+    "candidate_over_reference": 0.985155265106864,
+    "reference_drift": -0.01462948193528224,
+    "candidate_drift": 0.004715880106150427
+  },
+  {
+    "family": "cpu1",
+    "case": "traj_128x25x2_f64",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0003380250127520412,
+      0.00031714499345980585,
+      0.00031684950226917863,
+      0.00033039000118151307
+    ],
+    "candidate_over_reference": 0.948504271317892,
+    "reference_drift": -0.022587120131635996,
+    "candidate_drift": -0.0009317227032457076
+  },
+  {
+    "family": "cpu1",
+    "case": "traj_128x25x2_f64",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.00037455807178048416,
+      0.00033351150195812804,
+      0.0003330839870614,
+      0.0003557185089448467
+    ],
+    "candidate_over_reference": 0.9127986664414831,
+    "reference_drift": -0.05029810930540746,
+    "candidate_drift": -0.0012818595287359402
+  },
+  {
+    "family": "cpu4",
+    "case": "channels_20x25x3_f32",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0006472789973486215,
+      0.0006133725109975785,
+      0.0006167670071590692,
+      0.0006455934926634654
+    ],
+    "candidate_over_reference": 0.9514778353317327,
+    "reference_drift": -0.0026039848227119577,
+    "candidate_drift": 0.005534151108222751
+  },
+  {
+    "family": "cpu4",
+    "case": "channels_20x25x3_f32",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0006681259925244376,
+      0.0006285944924456999,
+      0.0006359394974424504,
+      0.0006636499892920256
+    ],
+    "candidate_over_reference": 0.9495095324991528,
+    "reference_drift": -0.006699340068330506,
+    "candidate_drift": 0.011684806477022969
+  },
+  {
+    "family": "cpu4",
+    "case": "channels_20x25x3_f32",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.00017759751062840223,
+      0.00016575750487390906,
+      0.00016643198614474386,
+      0.00017695249698590487
+    ],
+    "candidate_over_reference": 0.9369326861784225,
+    "reference_drift": -0.0036318844797715855,
+    "candidate_drift": 0.004069084361205011
+  },
+  {
+    "family": "cpu4",
+    "case": "channels_20x25x3_f32",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.00019844002526951953,
+      0.0001878854527603835,
+      0.00018727050919551403,
+      0.00020151099597569554
+    ],
+    "candidate_over_reference": 0.9380047606526415,
+    "reference_drift": 0.015475560950998002,
+    "candidate_drift": -0.003272970609671022
+  },
+  {
+    "family": "cpu4",
+    "case": "channels_20x25x3_f64",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0006364639848470688,
+      0.0005987464974168688,
+      0.0006071719981264323,
+      0.0006318980013020337
+    ],
+    "candidate_over_reference": 0.9507683994887081,
+    "reference_drift": -0.0071739857301309495,
+    "candidate_drift": 0.014071899787160502
+  },
+  {
+    "family": "cpu4",
+    "case": "channels_20x25x3_f64",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0006544649819261395,
+      0.0006126664928160607,
+      0.0006273999300901778,
+      0.0009125195138039999
+    ],
+    "candidate_over_reference": 0.7913712141283359,
+    "reference_drift": 0.3942984559974265,
+    "candidate_drift": 0.02404805460536319
+  },
+  {
+    "family": "cpu4",
+    "case": "channels_20x25x3_f64",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0001733679964672774,
+      0.00015951150271575898,
+      0.0001602575066499412,
+      0.0001727579947328195
+    ],
+    "candidate_over_reference": 0.9238514803727651,
+    "reference_drift": -0.003518537140002387,
+    "candidate_drift": 0.004676803374560112
+  },
+  {
+    "family": "cpu4",
+    "case": "channels_20x25x3_f64",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.00019565150287235156,
+      0.00018223401712020857,
+      0.0001841690085711889,
+      0.0001984895672649145
+    ],
+    "candidate_over_reference": 0.9296240697874789,
+    "reference_drift": 0.01450571220204,
+    "candidate_drift": 0.010618168229831193
+  },
+  {
+    "family": "cpu4",
+    "case": "high_channel_stress_8x10x7_f32",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0007783405017107725,
+      0.000752054009353742,
+      0.0007489580020774156,
+      0.0007817399891791865
+    ],
+    "candidate_over_reference": 0.9621375436692338,
+    "reference_drift": 0.004367609627074609,
+    "candidate_drift": -0.004116735284726225
+  },
+  {
+    "family": "cpu4",
+    "case": "high_channel_stress_8x10x7_f32",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0008081990308710374,
+      0.00077206499845488,
+      0.0007674709821003489,
+      0.0008390090544708074
+    ],
+    "candidate_over_reference": 0.9346335743827588,
+    "reference_drift": 0.03812182695463573,
+    "candidate_drift": -0.005950297402064653
+  },
+  {
+    "family": "cpu4",
+    "case": "high_channel_stress_8x10x7_f32",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.00015118200099095702,
+      0.00014175099204294384,
+      0.0001443009969079867,
+      0.00015325700223911554
+    ],
+    "candidate_over_reference": 0.9396036181827646,
+    "reference_drift": 0.013725187089451474,
+    "candidate_drift": 0.017989326411700368
+  },
+  {
+    "family": "cpu4",
+    "case": "high_channel_stress_8x10x7_f32",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.00019046194502152501,
+      0.0001673174963798374,
+      0.00016734156815800816,
+      0.00021887506736675277
+    ],
+    "candidate_over_reference": 0.8175636563751625,
+    "reference_drift": 0.1491800492849984,
+    "candidate_drift": 0.00014386886423456424
+  },
+  {
+    "family": "cpu4",
+    "case": "high_channel_stress_8x10x7_f64",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0007158170046750456,
+      0.0006849709898233414,
+      0.0006919809966348112,
+      0.0007046064856695011
+    ],
+    "candidate_over_reference": 0.9693953921616366,
+    "reference_drift": -0.015661152127328437,
+    "candidate_drift": 0.010234020003208721
+  },
+  {
+    "family": "cpu4",
+    "case": "high_channel_stress_8x10x7_f64",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0007421574802719988,
+      0.0007086139943567104,
+      0.0007177450563176536,
+      0.0007302794940187596
+    ],
+    "candidate_over_reference": 0.9687063525156386,
+    "reference_drift": -0.016004670934376297,
+    "candidate_drift": 0.012885805295494324
+  },
+  {
+    "family": "cpu4",
+    "case": "high_channel_stress_8x10x7_f64",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.00015455650282092392,
+      0.0001446610112907365,
+      0.0001529964938526973,
+      0.00015549150703009218
+    ],
+    "candidate_over_reference": 0.9600368190928361,
+    "reference_drift": 0.0060495947572751785,
+    "candidate_drift": 0.057620795593695595
+  },
+  {
+    "family": "cpu4",
+    "case": "high_channel_stress_8x10x7_f64",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.000179565507278312,
+      0.00016956753970589488,
+      0.000176368527172599,
+      0.0001794214898836799
+    ],
+    "candidate_over_reference": 0.9636451169912184,
+    "reference_drift": -0.0008020326220495866,
+    "candidate_drift": 0.04010783831917375
+  },
+  {
+    "family": "cpu4",
+    "case": "representative_100x10x2_f32",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0008127765031531453,
+      0.0007799305021762848,
+      0.0007891954883234575,
+      0.0008052109915297478
+    ],
+    "candidate_over_reference": 0.9698010619094883,
+    "reference_drift": -0.009308231222294516,
+    "candidate_drift": 0.011879245806286853
+  },
+  {
+    "family": "cpu4",
+    "case": "representative_100x10x2_f32",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0008470510030747392,
+      0.0008044374859309755,
+      0.0008319624321302399,
+      0.0008273890038253739
+    ],
+    "candidate_over_reference": 0.9772819039905042,
+    "reference_drift": -0.023212296754260953,
+    "candidate_drift": 0.03421638931633053
+  },
+  {
+    "family": "cpu4",
+    "case": "representative_100x10x2_f32",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.00021633449068758637,
+      0.0002074450021609664,
+      0.00020374949963297695,
+      0.00021399951947387308
+    ],
+    "candidate_over_reference": 0.955524062900966,
+    "reference_drift": -0.010793337697987626,
+    "candidate_drift": -0.01781437243362427
+  },
+  {
+    "family": "cpu4",
+    "case": "representative_100x10x2_f32",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0002375799333094619,
+      0.00022876497532706708,
+      0.00022546800028067082,
+      0.00023981503618415443
+    ],
+    "candidate_over_reference": 0.9514825346600385,
+    "reference_drift": 0.009407793173260792,
+    "candidate_drift": -0.014412062168531525
+  },
+  {
+    "family": "cpu4",
+    "case": "representative_100x10x2_f64",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0007823250052751973,
+      0.0007656739908270538,
+      0.0007651189953321591,
+      0.0007737800042377785
+    ],
+    "candidate_over_reference": 0.9837337305650825,
+    "reference_drift": -0.01092257179535372,
+    "candidate_drift": -0.0007248456935244896
+  },
+  {
+    "family": "cpu4",
+    "case": "representative_100x10x2_f64",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0008017909989575855,
+      0.0007836204516934231,
+      0.0007807480404153466,
+      0.0007955164997838438
+    ],
+    "candidate_over_reference": 0.9793784185833889,
+    "reference_drift": -0.007825604405511277,
+    "candidate_drift": -0.003665564460280657
+  },
+  {
+    "family": "cpu4",
+    "case": "representative_100x10x2_f64",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0002023940032813698,
+      0.0001916740002343431,
+      0.00019181349489372224,
+      0.00020144401059951633
+    ],
+    "candidate_over_reference": 0.9496072235566628,
+    "reference_drift": -0.004693778800020976,
+    "candidate_drift": 0.0007277703768302501
+  },
+  {
+    "family": "cpu4",
+    "case": "representative_100x10x2_f64",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.00022096204775152726,
+      0.00021156805887585507,
+      0.00021053502423455938,
+      0.00022670693142572417
+    ],
+    "candidate_over_reference": 0.9428910707330598,
+    "reference_drift": 0.025999413621732304,
+    "candidate_drift": -0.004882753317228539
+  },
+  {
+    "family": "cpu4",
+    "case": "traj_128x25x2_f32",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0013787570060230792,
+      0.0013516459875972942,
+      0.0013455300068017095,
+      0.0014051725011086091
+    ],
+    "candidate_over_reference": 0.9688377480426695,
+    "reference_drift": 0.01915891993305152,
+    "candidate_drift": -0.0045248392343149035
+  },
+  {
+    "family": "cpu4",
+    "case": "traj_128x25x2_f32",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0014429545029997826,
+      0.001404064500820823,
+      0.001408417495258618,
+      0.0018007567981840108
+    ],
+    "candidate_over_reference": 0.8670568170024949,
+    "reference_drift": 0.24796505672243097,
+    "candidate_drift": 0.003100280959493107
+  },
+  {
+    "family": "cpu4",
+    "case": "traj_128x25x2_f32",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0003475709818303585,
+      0.00033830999745987356,
+      0.0003392750077182427,
+      0.0003480105078779161
+    ],
+    "candidate_over_reference": 0.9741274246131736,
+    "reference_drift": 0.001264564853035166,
+    "candidate_drift": 0.002852443810749561
+  },
+  {
+    "family": "cpu4",
+    "case": "traj_128x25x2_f32",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0003826999440207146,
+      0.00036544249014696105,
+      0.0003595954432967119,
+      0.0003693240520078689
+    ],
+    "candidate_over_reference": 0.9641154235404413,
+    "reference_drift": -0.03495138220381255,
+    "candidate_drift": -0.015999909720125327
+  },
+  {
+    "family": "cpu4",
+    "case": "traj_128x25x2_f64",
+    "phase": "forward_backward",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.001351975995930843,
+      0.0013062889920547605,
+      0.0013135089975548908,
+      0.0013500149943865836
+    ],
+    "candidate_over_reference": 0.9695805792830866,
+    "reference_drift": -0.0014504706815517965,
+    "candidate_drift": 0.005527111951524111
+  },
+  {
+    "family": "cpu4",
+    "case": "traj_128x25x2_f64",
+    "phase": "forward_backward",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0014271260195528157,
+      0.0013718770540435798,
+      0.0013614389885333368,
+      0.001411678991280496
+    ],
+    "candidate_over_reference": 0.9628403614007185,
+    "reference_drift": -0.010823871235393745,
+    "candidate_drift": -0.007608601280615579
+  },
+  {
+    "family": "cpu4",
+    "case": "traj_128x25x2_f64",
+    "phase": "forward_no_grad",
+    "metric": "median_seconds",
+    "ABBA": [
+      0.0003348400059621781,
+      0.00032315000134985894,
+      0.00032261449086945504,
+      0.00033155499841086566
+    ],
+    "candidate_over_reference": 0.9690416164311746,
+    "reference_drift": -0.009810678212935797,
+    "candidate_drift": -0.001657157599155079
+  },
+  {
+    "family": "cpu4",
+    "case": "traj_128x25x2_f64",
+    "phase": "forward_no_grad",
+    "metric": "p95_seconds",
+    "ABBA": [
+      0.0003582619930966757,
+      0.0003420515087782405,
+      0.0003448534567723982,
+      0.0003512305527692661
+    ],
+    "candidate_over_reference": 0.968163752463763,
+    "reference_drift": -0.0196265315967028,
+    "candidate_drift": 0.008191596652111999
+  }
+]

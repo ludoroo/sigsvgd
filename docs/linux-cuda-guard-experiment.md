@@ -1,3 +1,10 @@
+> **Historical rejection superseded:** the original strict private-metadata
+> and short-run tail gates below are preserved, not erased. Independent public
+> alias/mutation tests and the longer all-run tail protocol support the adopted
+> four-guard v2 patch under the user's clarified “ballpark” performance target.
+> See [current result](linux-cuda-optimization.md). Private version/view/base
+> attributes are explicitly not preserved; exact parity is not claimed.
+
 # Dispatcher guard experiment: REJECTED, not adopted
 
 The detached-backward guard improves CUDA median timing but fails the

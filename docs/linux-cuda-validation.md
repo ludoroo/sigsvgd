@@ -84,3 +84,7 @@ The regression persists across order reversal.
 ## Profiling follow-up
 
 See [bounded installed-runtime profiling](linux-cuda-profiling.md) for overhead attribution, raw summaries and limitations.
+
+For the bounded chunking/backend investigation, see the [CUDA numerical diagnostic](linux-cuda-numerics.md).
+
+Current Linux installer patch, same-version optional cu126 runtime, final tests and remaining performance gap: [Linux optimization](linux-cuda-optimization.md). The measurements above retain their historical unoptimized scope.

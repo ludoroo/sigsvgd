@@ -1,0 +1,20 @@
+{
+  "torch": "1.9.0+cu111",
+  "cuda": "11.1",
+  "native": {
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libc10.so": "802e12d69e99c3fbf0dc14de05c0397a611a233d6afc58678a1656898e12eac9",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libc10_cuda.so": "a1c546f88fdde575cd402ca36d314f317c92079a7fa47bfccf2c59cec5f64b21",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libcaffe2_detectron_ops_gpu.so": "7f16ecb5ff0a6d3e42855961b7e3a0073ea38a20f23730e859a3fb53182c32b4",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libcaffe2_module_test_dynamic.so": "677a8d5216ee000e9724114a435f79fa89e89944f467f869826e788c1b7a3ea8",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libcaffe2_nvrtc.so": "04671fceff4979d6f0d9731dc27eb0aaa2323eaae85a8038fad16d183185ec38",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libcaffe2_observers.so": "5c8264f9c41afb3d41c4de8fb1b01d61f1be3ee65299ec5ec70444086ba21292",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libshm.so": "1b7d2421a3eeaee675323f10240ae8b26ce925d26e5a7a3c2fda0a8e87d1280f",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch.so": "733c4cd574a373cc58d4722ea62a235543c74dfe69abc02e0e6654f25ffd0006",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so": "677cdeed7342adb62fe652e273726fbbe2d3495824ef6b2f11ab093367a4d03f",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so": "9e458bf1bc38003b1609b26dedf5cd23a5d64effb8f9653298a7ae40d82d6d7c",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_cuda_cpp.so": "5c9938375b7f6f792f95be130b5b6b8824cff6ea30d4963f6e4c2cbc110b49a5",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_cuda_cu.so": "5e148bc33039e0dd5865c42b168b8c8d125e851dc8688b085f653c2494e9f724",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_global_deps.so": "7bd6b715653d13e97deb866bdec4e219e39a0603af12065461c64eef64c73af6",
+    "/home/coder/.venvs/sigsvgd-reference/lib/python3.9/site-packages/torch/lib/libtorch_python.so": "a852a4da25defebe9e0b1aa8ebf5b69bc7f2c07e3647182320ed30a41a5e3292"
+  }
+}

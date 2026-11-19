@@ -1,0 +1,10 @@
+{
+  "src/signature.cpp": {
+    "measured_source_sha256": "7da7fb0914fe3cc784f92a27e6a8259841eb60222a4989070de8cde1987803da",
+    "installer_expected_source_sha256": "7da7fb0914fe3cc784f92a27e6a8259841eb60222a4989070de8cde1987803da"
+  },
+  "src/tensor_algebra_ops.cpp": {
+    "measured_source_sha256": "3537607dc83382b728f89a262ac0e286a4eb42bb71d6175f62273ad5b7eaca69",
+    "installer_expected_source_sha256": "3537607dc83382b728f89a262ac0e286a4eb42bb71d6175f62273ad5b7eaca69"
+  }
+}

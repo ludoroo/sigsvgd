@@ -1,0 +1,43 @@
+         13002 function calls in 0.589 seconds
+
+   Ordered by: cumulative time
+   List reduced from 46 to 35 due to restriction <35>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.004    0.004    0.589    0.589 cprofile.py:4(run)
+      200    0.001    0.000    0.510    0.003 __init__.py:152(grad)
+      200    0.124    0.001    0.508    0.003 {method 'run_backward' of 'torch._C._EngineBase' objects}
+      600    0.000    0.000    0.430    0.001 impl.py:34(wrapped)
+      200    0.000    0.000    0.383    0.002 function.py:85(apply)
+      200    0.001    0.000    0.383    0.002 function.py:201(wrapper)
+      200    0.001    0.000    0.381    0.002 signature_module.py:73(backward)
+      200    0.375    0.002    0.375    0.002 {built-in method signatory._impl.signature_backward}
+      200    0.001    0.000    0.064    0.000 signature_module.py:172(signature)
+      200    0.002    0.000    0.059    0.000 {built-in method apply}
+      200    0.001    0.000    0.057    0.000 signature_module.py:52(forward)
+      200    0.055    0.000    0.055    0.000 {built-in method signatory._impl.signature_forward}
+      200    0.005    0.000    0.005    0.000 {method 'contiguous' of 'torch._C._TensorBase' objects}
+      200    0.004    0.000    0.004    0.000 {built-in method stack}
+      200    0.001    0.000    0.003    0.000 signature_module.py:95(_signature_checkargs)
+      200    0.003    0.000    0.003    0.000 {method 'cos' of 'torch._C._TensorBase' objects}
+      200    0.003    0.000    0.003    0.000 {method 'sin' of 'torch._C._TensorBase' objects}
+      200    0.001    0.000    0.002    0.000 __init__.py:28(_make_grads)
+      400    0.000    0.000    0.002    0.000 signature_module.py:30(interpret_basepoint)
+      200    0.002    0.000    0.002    0.000 {method 'sum' of 'torch._C._TensorBase' objects}
+      400    0.001    0.000    0.001    0.000 {built-in method zeros}
+      200    0.001    0.000    0.001    0.000 signature_module.py:102(_signature_batch_trick)
+      400    0.001    0.000    0.001    0.000 {method 'transpose' of 'torch._C._TensorBase' objects}
+      200    0.001    0.000    0.001    0.000 {built-in method ones_like}
+      400    0.001    0.000    0.001    0.000 signature_module.py:41(interpret_initial)
+      200    0.000    0.000    0.001    0.000 grad_mode.py:128(__exit__)
+      400    0.000    0.000    0.001    0.000 grad_mode.py:213(__init__)
+      200    0.000    0.000    0.000    0.000 grad_mode.py:124(__enter__)
+      200    0.000    0.000    0.000    0.000 grad_mode.py:119(__init__)
+      200    0.000    0.000    0.000    0.000 {built-in method signatory._impl.signature_checkargs}
+     1400    0.000    0.000    0.000    0.000 {built-in method builtins.isinstance}
+      800    0.000    0.000    0.000    0.000 {method 'size' of 'torch._C._TensorBase' objects}
+      800    0.000    0.000    0.000    0.000 {built-in method torch._C.is_grad_enabled}
+      400    0.000    0.000    0.000    0.000 {built-in method builtins.round}
+      200    0.000    0.000    0.000    0.000 {built-in method builtins.min}
+
+

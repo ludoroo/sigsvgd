@@ -35,6 +35,19 @@ runtime requirement. The installer forces a fresh source build and, on macOS,
 links the extension to PyTorch's bundled OpenMP runtime to avoid duplicate-runtime
 crashes. It never enables `KMP_DUPLICATE_LIB_OK`.
 
+On Linux, the installer downloads a fixed SHA256-verified PyPI sdist directly
+from `files.pythonhosted.org` (bypassing pip mirror source selection) and applies
+four verified detached-native dispatcher guards (v2) before building. Safe extraction needs
+Python 3.10.12+ or 3.11.4+ (or newer supported Python). macOS is unchanged.
+The optional measured GPU runtime is `torch==2.13.0+cu126` from
+`https://download.pytorch.org/whl/cu126`; the installer does not select it for you.
+See [Linux optimization and installation evidence](docs/linux-cuda-optimization.md).
+Final L4 measurements are in the requested performance ballpark: approximately
+2–5% slower forward and 7–10% slower forward+backward than legacy, with the
+all-run mean per-run p95 ratios also within 10%. These are measured workloads,
+not unconditional performance or numerical equivalence; the stress gradient
+mismatch remains unresolved.
+
 Re-run `scripts/install_signatory.py` after any Python or PyTorch change; do not
 reuse an extension built against another PyTorch ABI. The PyTorch pin makes that
 upgrade an explicit maintenance step. The installer source build and CPU smoke check were validated on Apple Silicon

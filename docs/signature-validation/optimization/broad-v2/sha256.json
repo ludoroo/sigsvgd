@@ -1,0 +1,16 @@
+{
+  "/tmp/sigsvgd-broad-cu126/signatory-1.2.6.1.9.0/src/tensor_algebra_ops.cpp": "3537607dc83382b728f89a262ac0e286a4eb42bb71d6175f62273ad5b7eaca69",
+  "/tmp/sigsvgd-broad-cu126/signatory-1.2.6.1.9.0/src/signature.cpp": "7da7fb0914fe3cc784f92a27e6a8259841eb60222a4989070de8cde1987803da",
+  "/tmp/sigsvgd-broad-cu126/signatory-1.2.6.1.9.0/src/pytorchbind.cpp": "1f413a193f8b0b163610f30ed096b78bbb7d09dd11ce0ff2687c17bb6c89ab90",
+  "/tmp/sigsvgd-broad-cu126/signatory-1.2.6.1.9.0/src/misc.cpp": "56d572c7c282f33f2a04aef4bfadab2c7ba6d95c42685a0e00bb78892a9e0c22",
+  "/tmp/sigsvgd-broad-cu126/signatory-1.2.6.1.9.0/src/lyndon.cpp": "bf15b61b5feea8c5d72d42ea8873c4f6329fbacf8d6351355a2a413a77f4e63d",
+  "/tmp/sigsvgd-broad-cu126/signatory-1.2.6.1.9.0/src/logsignature.cpp": "d9f47b1330b2c47858b53a47b836046788465eea086f399ca97c67bd8bebc822",
+  "/tmp/sigsvgd-broad-cu126/wheels/signatory-1.2.6.1.9.0-cp311-cp311-linux_x86_64.whl": "3732866613abf92c0eea62b06d51e9fca10e1bc045b74c74237d4f6824f18168",
+  "/tmp/sigsvgd-broad-cu130/overlay/signatory/_impl.cpython-311-x86_64-linux-gnu.so": "a0b462394552fe1eeb71990ca708755bf149e4e74d3e759210eb37ea05e653e5",
+  "/tmp/sigsvgd-cu126-env/lib/python3.11/site-packages/signatory/_impl.cpython-311-x86_64-linux-gnu.so": "235d9a523c03af4d4f0b0deb400a81ac6e4aa56701157aac4f6cef356aa28b55",
+  "scripts/install_signatory.py": "b3ef36cad86d529d8d726c6c864677a35f1713aa37b43732881559ba40ae89e3",
+  "scripts/patches/signatory-1.2.6.1.9.0-linux-autograd-v2.json": "810fdeabf929ff8c74f9e8ef303f9896cbf0ddfbd61746b0c014f919c329709b",
+  "tests/test_signatory_guard_contract.py": "a604cae4949f0f21f29c27dc97bedadd7c8e2f717f878f6b16fa8b3456a39e4d",
+  "docs/signature-validation/optimization/broad-v2/final-cu126-v2-tests.txt": "8a950f2737eed4882e97878d5f11f01481ec329b79125b787081261aab03cba2",
+  "docs/signature-validation/optimization/broad-v2/final-cu130-v2-tests.txt": "eb3cf117fe02955123583675ebf8bd67b9f915544ce469de16e621f669cdb3b6"
+}

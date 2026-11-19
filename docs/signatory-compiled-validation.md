@@ -2,7 +2,7 @@
 
 ## Outcome
 
-The original **Signatory 1.2.6.1.9.0 C++ source builds unchanged against PyTorch 2.13.0**. No signature or backward algorithm port was necessary. Production `PathSigKernel` now uses this rebuilt native implementation instead of the slower pure-PyTorch candidate.
+The historical Apple Silicon validation used the original **Signatory 1.2.6.1.9.0 C++ source builds unchanged against PyTorch 2.13.0**. No signature or backward algorithm port was necessary. Linux now applies four verified broad detached-native dispatcher guards (v2); see [current Linux optimization](linux-cuda-optimization.md). The unchanged-source statement and tables below describe the historical macOS validation. Production `PathSigKernel` now uses this rebuilt native implementation instead of the slower pure-PyTorch candidate.
 
 The earlier assumption that the package's Torch-1.9 version suffix required keeping that runtime was too strong: binary builds are ABI-specific, but this source remains build-compatible with the tested patched runtime.
 
