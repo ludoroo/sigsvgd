@@ -1,0 +1,20 @@
+--- a/src/signature.cpp
++++ b/src/signature.cpp
+@@ -447,6 +447,7 @@
+         grad_signature = grad_signature.detach();
+         signature = signature.detach();
+         path_increments = path_increments.detach();
++        at::AutoDispatchBelowADInplaceOrView below_autograd;
+ 
+         torch::TensorOptions opts = signature.options();
+         torch::Tensor reciprocals = misc::make_reciprocals(depth, opts);
+--- a/src/tensor_algebra_ops.cpp
++++ b/src/tensor_algebra_ops.cpp
+@@ -1130,6 +1130,7 @@
+         for (auto& elem : sigtensors) {
+             elem = elem.detach();
+         }
++        at::AutoDispatchBelowADInplaceOrView below_autograd;
+ 
+         // Allocate memory for the output gradients
+         std::vector<torch::Tensor> grad_sigtensors;

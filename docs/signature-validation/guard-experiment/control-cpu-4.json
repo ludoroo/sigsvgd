@@ -1,0 +1,136 @@
+{
+  "backend": "signatory",
+  "cases": {
+    "channels_20x25x3_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0019101350044365972,
+        "p95_seconds": 0.0019506048905896022,
+        "samples": 15
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.00019118899945169687,
+        "p95_seconds": 0.00021978260774631052,
+        "samples": 15
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "channels_20x25x3_f64": {
+      "forward_backward": {
+        "median_seconds": 0.001891203981358558,
+        "p95_seconds": 0.0019059382990235462,
+        "samples": 15
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0001842580095399171,
+        "p95_seconds": 0.0002115452953148633,
+        "samples": 15
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "high_channel_stress_8x10x7_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0020492509938776493,
+        "p95_seconds": 0.0020898266055155547,
+        "samples": 15
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.000822856993181631,
+        "p95_seconds": 0.000840507005341351,
+        "samples": 15
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "high_channel_stress_8x10x7_f64": {
+      "forward_backward": {
+        "median_seconds": 0.002082271996187046,
+        "p95_seconds": 0.0021141290024388583,
+        "samples": 15
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0008146559994202107,
+        "p95_seconds": 0.0008282672934001312,
+        "samples": 15
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "representative_100x10x2_f32": {
+      "forward_backward": {
+        "median_seconds": 0.0017623780004214495,
+        "p95_seconds": 0.0017949867120478301,
+        "samples": 15
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0002284199872519821,
+        "p95_seconds": 0.0002465503057464957,
+        "samples": 15
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "representative_100x10x2_f64": {
+      "forward_backward": {
+        "median_seconds": 0.0017272770055569708,
+        "p95_seconds": 0.0017474262916948647,
+        "samples": 15
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.0002149399952031672,
+        "p95_seconds": 0.00023320371692534537,
+        "samples": 15
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "traj_128x25x2_f32": {
+      "forward_backward": {
+        "median_seconds": 0.003735306003363803,
+        "p95_seconds": 0.003759942000033334,
+        "samples": 15
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.00047364100464619696,
+        "p95_seconds": 0.0004886152863036841,
+        "samples": 15
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    },
+    "traj_128x25x2_f64": {
+      "forward_backward": {
+        "median_seconds": 0.0036993340181652457,
+        "p95_seconds": 0.0037256390060065314,
+        "samples": 15
+      },
+      "forward_no_grad": {
+        "median_seconds": 0.00046235998161137104,
+        "p95_seconds": 0.0004777222900884226,
+        "samples": 15
+      },
+      "peak_memory_forward": null,
+      "peak_memory_forward_backward": null
+    }
+  },
+  "cuda_available": true,
+  "cuda_runtime": "13.0",
+  "device": "cpu",
+  "device_name": "x86_64",
+  "environment": {
+    "CUBLAS_WORKSPACE_CONFIG": null,
+    "CUDA_VISIBLE_DEVICES": null,
+    "OMP_NUM_THREADS": "4"
+  },
+  "machine": "x86_64",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.8.0-1069-aws-x86_64-with-glibc2.35",
+  "python": "3.11.17",
+  "repeats": 15,
+  "signatory": "1.2.6.1.9.0",
+  "tf32_cudnn": false,
+  "tf32_matmul": false,
+  "threads": 4,
+  "torch": "2.13.0+cu130"
+}

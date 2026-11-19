@@ -1,0 +1,226 @@
+{
+  "python": "3.11.17",
+  "cuda_runtime": "13.0",
+  "cuda_available": true,
+  "device_name": "NVIDIA L4",
+  "tf32_matmul": false,
+  "tf32_cudnn": false,
+  "threads": 1,
+  "omp_num_threads": "1",
+  "torch": "2.13.0+cu130",
+  "device": "cuda",
+  "mode": "split",
+  "affinity": [
+    2
+  ],
+  "warmups": 20,
+  "repeats": 100,
+  "inputs_sha256": "e57529bb1b2e4fe5dc56b6bba64c8fd9a7a8ecafebcd9b5723025e0d18ad0848",
+  "source_hashes": {
+    "utility.py": "5e95ecbc65bb6977262f0fb2a7705900442341018cff095d3d4136125ce38a34",
+    "unstable.py": "53369301b0360e4aef71c691c37753a7f4caa04c38eb684c0a21c4ec29df7fb7",
+    "signature_module.py": "d1ca59b719b689a386fe063c3f3e42c1dc834de9083afa06c987cb564780cc2f",
+    "signature_inversion_module.py": "5af5d25f5c245b37cc17db653d66ee59158340f37dba1b39b268c1f1977f3904",
+    "path.py": "e0da46210f88ab37906139cdd6392dee463bb6dae67b21e54b4bd62c9aefe310",
+    "logsignature_module.py": "2240e4f1ca9171435bf940bc2ac8369e4c627fab9a2fbbd544edc4d5aa6a16c7",
+    "impl.py": "b8babe9357331cf4d8abdadc726053389825bbe966b113d4cec3b9d195e7d614",
+    "deprecated.py": "8de22e7cc3d390c0c4cdd01feb90030e0bda970d3853e2c71e69496599910a99",
+    "augment.py": "fa7125533030ab324a13f57678fda5c59f8a42a036330ab78e1e52d2382ffdae",
+    "__init__.py": "bbc1c5d69842def282612326c364859127ada4beaf5ce77b59e2b1d11d08d458"
+  },
+  "cases": {
+    "traj_128x25x2_f32": {
+      "forward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.30734975007362664,
+          "signature_forward": 36.175981076667085,
+          "signature_combine_forward": 18.327016878174618
+        },
+        "host_total_ms": 75.78540800022893,
+        "residual_host_ms": 20.975060295313597
+      },
+      "forward_backward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.3355179214850068,
+          "signature_forward": 37.677236046874896,
+          "signature_combine_forward": 19.45100410375744,
+          "signature_combine_backward": 60.099424968939275,
+          "signature_backward": 129.36210792395286
+        },
+        "host_total_ms": 326.0095259756781,
+        "residual_host_ms": 79.08423501066864
+      }
+    },
+    "representative_100x10x2_f32": {
+      "forward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.26760497712530196,
+          "signature_forward": 44.95567944832146,
+          "signature_combine_forward": 21.97428813087754
+        },
+        "host_total_ms": 90.27526099816896,
+        "residual_host_ms": 23.077688441844657
+      },
+      "forward_backward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.3502940235193819,
+          "signature_forward": 45.76081191771664,
+          "signature_combine_forward": 22.63903897255659,
+          "signature_combine_backward": 69.70753791392781,
+          "signature_backward": 130.56841972866096
+        },
+        "host_total_ms": 356.11410401179455,
+        "residual_host_ms": 87.08800145541318
+      }
+    },
+    "channels_20x25x3_f32": {
+      "forward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.26592292124405503,
+          "signature_forward": 35.35185594228096,
+          "signature_combine_forward": 18.38666421826929
+        },
+        "host_total_ms": 71.36818100116216,
+        "residual_host_ms": 17.36373791936785
+      },
+      "forward_backward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.3432140510994941,
+          "signature_forward": 36.456511850701645,
+          "signature_combine_forward": 19.065709871938452,
+          "signature_combine_backward": 57.99803719855845,
+          "signature_backward": 125.90091186575592
+        },
+        "host_total_ms": 305.5773990054149,
+        "residual_host_ms": 65.81301416736096
+      }
+    },
+    "high_channel_stress_8x10x7_f32": {
+      "forward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.27209409745410085,
+          "signature_forward": 43.7515958910808,
+          "signature_combine_forward": 22.28986896807328
+        },
+        "host_total_ms": 88.91495101852342,
+        "residual_host_ms": 22.60139206191525
+      },
+      "forward_backward": {
+        "native_host_ms": {
+          "signature_checkargs": 0.3521479375194758,
+          "signature_forward": 45.358557224972174,
+          "signature_combine_forward": 22.458879044279456,
+          "signature_combine_backward": 69.35421796515584,
+          "signature_backward": 130.70285876165144
+        },
+        "host_total_ms": 354.4769309810363,
+        "residual_host_ms": 86.25027004745789
+      }
+    }
+  },
+  "measurement_sources": {
+    "/home/coder/sigsvgd/scripts/profile_signatory_overhead.py": "ab7252ba553d7e9698334d7bef61d1b33e412fb434aec76820112dc4819ef118",
+    "/home/coder/sigsvgd/scripts/validate_path_signature.py": "c41abaf588c666acdc3e54cab2fc67b0268fc02954a74437bc0c9e65f2c41cdf"
+  },
+  "workload_configuration": {
+    "basepoint": true,
+    "forward_no_grad": true,
+    "traj_128x25x2_f32": {
+      "depth": 3,
+      "transform": "cos_sin",
+      "basepoint": true
+    },
+    "representative_100x10x2_f32": {
+      "depth": 4,
+      "transform": null,
+      "basepoint": true
+    },
+    "channels_20x25x3_f32": {
+      "depth": 3,
+      "transform": null,
+      "basepoint": true
+    },
+    "high_channel_stress_8x10x7_f32": {
+      "depth": 4,
+      "transform": null,
+      "basepoint": true
+    }
+  },
+  "native_provenance": {
+    "/tmp/sigsvgd-guard-experiment/control/overlay/signatory/_impl.cpython-311-x86_64-linux-gnu.so": {
+      "sha256": "208f808f0e80094dfcf695bd7c572a9023b0891a2feaff7b1071bfaf59b61aa2",
+      "producers": [
+        "<12d0ed7>   DW_AT_producer    : (indirect string, offset: 0x299946): GNU C++20 11.4.0 -mno-omit-leaf-frame-pointer -mtune=generic -march=x86-64 -g -O3 -O3 -std=c++20 -fwrapv -fstack-protector -fno-omit-frame-pointer -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection",
+        "<39c93f>   DW_AT_producer    : (indirect string, offset: 0x299946): GNU C++20 11.4.0 -mno-omit-leaf-frame-pointer -mtune=generic -march=x86-64 -g -O3 -O3 -std=c++20 -fwrapv -fstack-protector -fno-omit-frame-pointer -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection",
+        "<76a64e>   DW_AT_producer    : (indirect string, offset: 0x299946): GNU C++20 11.4.0 -mno-omit-leaf-frame-pointer -mtune=generic -march=x86-64 -g -O3 -O3 -std=c++20 -fwrapv -fstack-protector -fno-omit-frame-pointer -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection",
+        "<ac4223>   DW_AT_producer    : (indirect string, offset: 0x299946): GNU C++20 11.4.0 -mno-omit-leaf-frame-pointer -mtune=generic -march=x86-64 -g -O3 -O3 -std=c++20 -fwrapv -fstack-protector -fno-omit-frame-pointer -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection",
+        "<e>   DW_AT_producer    : (indirect string, offset: 0x299946): GNU C++20 11.4.0 -mno-omit-leaf-frame-pointer -mtune=generic -march=x86-64 -g -O3 -O3 -std=c++20 -fwrapv -fstack-protector -fno-omit-frame-pointer -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection",
+        "<f408d5>   DW_AT_producer    : (indirect string, offset: 0x299946): GNU C++20 11.4.0 -mno-omit-leaf-frame-pointer -mtune=generic -march=x86-64 -g -O3 -O3 -std=c++20 -fwrapv -fstack-protector -fno-omit-frame-pointer -fPIC -fvisibility=hidden -fopenmp -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection"
+      ],
+      "ldd": "\tlinux-vdso.so.1 (0x00007fff9a7d5000)\n\tlibc10.so => not found\n\tlibtorch_cpu.so => not found\n\tlibtorch_python.so => not found\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000078f41cc00000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000078f41cf09000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000078f41cee7000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000078f41c800000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000078f41d094000)\n"
+    }
+  },
+  "runtime_library_paths": [
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/cuda/bindings/_internal/driver.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/cuda/bindings/_internal/runtime.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/cuda/bindings/_internal/runtime_ptds.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/cuda/bindings/_internal/utils.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/cuda/bindings/cydriver.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/cuda/bindings/cyruntime.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/cuda/bindings/driver.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/cuda/bindings/runtime.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy/_core/_multiarray_umath.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy/linalg/_umath_linalg.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy/random/_bounded_integers.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy/random/_common.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy/random/_generator.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy/random/_mt19937.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy/random/_pcg64.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy/random/_philox.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy/random/_sfc64.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy/random/bit_generator.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/numpy/random/mtrand.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cu13/lib/libcublas.so.13",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cu13/lib/libcublasLt.so.13",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cu13/lib/libcudart.so.13",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cu13/lib/libcufft.so.12",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cu13/lib/libcufile.so.0",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cu13/lib/libcupti.so.13",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cu13/lib/libcurand.so.10",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cu13/lib/libcusolver.so.12",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cu13/lib/libcusparse.so.12",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cu13/lib/libnvJitLink.so.13",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cu13/lib/libnvrtc-builtins.so.13.0",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cu13/lib/libnvrtc.so.13",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cudnn/lib/libcudnn.so.9",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/cusparselt/lib/libcusparseLt.so.0",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/nccl/lib/libnccl.so.2",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/nvidia/nvshmem/lib/libnvshmem_host.so.3",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/_C.cpython-311-x86_64-linux-gnu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/lib/libc10.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/lib/libc10_cuda.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/lib/libgomp.so.1",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/lib/libshm.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/lib/libtorch.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/lib/libtorch_global_deps.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/lib/libtorch_nvshmem.so",
+    "/home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/lib/libtorch_python.so",
+    "/tmp/sigsvgd-guard-experiment/control/overlay/signatory/_impl.cpython-311-x86_64-linux-gnu.so",
+    "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+    "/usr/lib/x86_64-linux-gnu/libc.so.6",
+    "/usr/lib/x86_64-linux-gnu/libcuda.so.590.48.01",
+    "/usr/lib/x86_64-linux-gnu/libdl.so.2",
+    "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/usr/lib/x86_64-linux-gnu/libm.so.6",
+    "/usr/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/usr/lib/x86_64-linux-gnu/librt.so.1",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30",
+    "/usr/lib/x86_64-linux-gnu/libutil.so.1",
+    "/usr/lib/x86_64-linux-gnu/libz.so.1.2.11"
+  ]
+}

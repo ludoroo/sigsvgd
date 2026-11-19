@@ -1,0 +1,51 @@
+
+==================================== ERRORS ====================================
+__ ERROR collecting examples/test_optimise_arm_spline-with-path-signature.py ___
+ImportError while importing test module '/home/coder/sigsvgd/examples/test_optimise_arm_spline-with-path-signature.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../.local/share/uv/python/cpython-3.11.17-linux-x86_64-gnu/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+examples/test_optimise_arm_spline-with-path-signature.py:11: in <module>
+    from src.models.robot import robot_scene, robot_visualizer
+src/models/robot/robot_scene.py:9: in <module>
+    import pybullet as p
+E   ModuleNotFoundError: No module named 'pybullet'
+____________ ERROR collecting examples/test_optimise_arm_spline.py _____________
+ImportError while importing test module '/home/coder/sigsvgd/examples/test_optimise_arm_spline.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../.local/share/uv/python/cpython-3.11.17-linux-x86_64-gnu/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+examples/test_optimise_arm_spline.py:8: in <module>
+    from src.models.robot import robot_simulator, robot_scene
+src/models/robot/robot_simulator.py:4: in <module>
+    import pybullet as p
+E   ModuleNotFoundError: No module named 'pybullet'
+__________________ ERROR collecting examples/test_pendulum.py __________________
+ImportError while importing test module '/home/coder/sigsvgd/examples/test_pendulum.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+../.local/share/uv/python/cpython-3.11.17-linux-x86_64-gnu/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+examples/test_pendulum.py:7: in <module>
+    from src.utils._experiments import run_gym_simulation
+src/utils/_experiments.py:1: in <module>
+    import gym
+E   ModuleNotFoundError: No module named 'gym'
+=============================== warnings summary ===============================
+../.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/jit/_script.py:1488
+../.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/jit/_script.py:1488
+  /home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/jit/_script.py:1488: DeprecationWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR examples/test_optimise_arm_spline-with-path-signature.py
+ERROR examples/test_optimise_arm_spline.py
+ERROR examples/test_pendulum.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!!
+2 warnings, 3 errors in 3.43s

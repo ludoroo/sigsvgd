@@ -1,0 +1,4 @@
+b5c7c1fe97ac807a110ebe2166fc3c2d1d6a8ab271d7a49928acd3de1a72dffb  /tmp/sigsvgd-guard-experiment/patched/wheels/signatory-1.2.6.1.9.0-cp311-cp311-linux_x86_64.whl
+df6ebac5e1115cb7438d5603b6890117c4e89eabf7154e06ec3a80cdc32cb3c0  /tmp/sigsvgd-guard-experiment/control/wheels/signatory-1.2.6.1.9.0-cp311-cp311-linux_x86_64.whl
+81f9db6831aeb2d2bcca17ddf5ae384628bf70919535d49c17b8ce60023456d7  /tmp/sigsvgd-guard-experiment/patched/overlay/signatory/_impl.cpython-311-x86_64-linux-gnu.so
+208f808f0e80094dfcf695bd7c572a9023b0891a2feaff7b1071bfaf59b61aa2  /tmp/sigsvgd-guard-experiment/control/overlay/signatory/_impl.cpython-311-x86_64-linux-gnu.so

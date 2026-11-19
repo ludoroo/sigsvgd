@@ -1,0 +1,22 @@
+control cpu 1: keys_equal=True mismatches=[]
+patched cpu 1: keys_equal=True mismatches=[]
+control cpu 4: keys_equal=True mismatches=[]
+patched cpu 4: keys_equal=True mismatches=[]
+control cuda 1: keys_equal=True mismatches=[]
+patched cuda 1: keys_equal=True mismatches=[]
+cpu round 1 traj_128x25x2_f32: 2.5064 -> 2.4894 ms improvement=0.68%
+cpu round 1 representative_100x10x2_f32: 1.3707 -> 1.3387 ms improvement=2.34%
+cpu round 1 channels_20x25x3_f32: 0.8502 -> 0.8082 ms improvement=4.94%
+cpu round 1 high_channel_stress_8x10x7_f32: 1.0145 -> 1.0124 ms improvement=0.21%
+cpu round 2 traj_128x25x2_f32: 2.5238 -> 2.4987 ms improvement=0.99%
+cpu round 2 representative_100x10x2_f32: 1.3831 -> 1.3354 ms improvement=3.45%
+cpu round 2 channels_20x25x3_f32: 0.8563 -> 0.8064 ms improvement=5.83%
+cpu round 2 high_channel_stress_8x10x7_f32: 1.0240 -> 1.0056 ms improvement=1.80%
+cuda round 1 traj_128x25x2_f32: 3.1318 -> 2.7734 ms improvement=11.44%
+cuda round 1 representative_100x10x2_f32: 3.5186 -> 3.1358 ms improvement=10.88%
+cuda round 1 channels_20x25x3_f32: 3.0294 -> 2.6707 ms improvement=11.84%
+cuda round 1 high_channel_stress_8x10x7_f32: 3.5186 -> 3.1452 ms improvement=10.61%
+cuda round 2 traj_128x25x2_f32: 3.1563 -> 2.7471 ms improvement=12.97%
+cuda round 2 representative_100x10x2_f32: 3.5468 -> 3.1508 ms improvement=11.17%
+cuda round 2 channels_20x25x3_f32: 3.0511 -> 2.6488 ms improvement=13.19%
+cuda round 2 high_channel_stress_8x10x7_f32: 3.5262 -> 3.0909 ms improvement=12.34%

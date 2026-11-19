@@ -169,3 +169,8 @@ for device in cpu cuda; do
   done
 done
 ```
+
+## Isolated guard follow-up
+
+See [experimental dispatcher guard results](linux-cuda-guard-experiment.md).
+This is an overlay-only experiment, not an adopted optimization.

@@ -1,0 +1,4 @@
+/tmp/sigsvgd-guard-experiment/patched/overlay/signatory/signature_module.py:242: UserWarning: Argument 'initial' has been set but argument 'basepoint' has not. This is almost certainly a mistake. Argument 'basepoint' should be set to the final value of the path whose signature is 'initial'. See the documentation at
+    https://signatory.readthedocs.io/en/latest/pages/examples/online.html
+for more information.
+  warnings.warn("Argument 'initial' has been set but argument 'basepoint' has not. This is almost certainly a "

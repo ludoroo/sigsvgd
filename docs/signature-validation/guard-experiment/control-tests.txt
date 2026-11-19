@@ -1,0 +1,9 @@
+.....s.........................                                          [100%]
+=============================== warnings summary ===============================
+../.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/jit/_script.py:1488
+../.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/jit/_script.py:1488
+  /home/coder/.venvs/sigsvgd-candidate/lib/python3.11/site-packages/torch/jit/_script.py:1488: DeprecationWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+30 passed, 1 skipped, 2 warnings in 29.65s

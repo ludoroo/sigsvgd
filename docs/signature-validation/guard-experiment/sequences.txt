@@ -1,0 +1,16 @@
+signatory-2.13.0+cu130-cpu-channels_20x25x3_f32-forward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 351/351, 0/0
+signatory-2.13.0+cu130-cpu-channels_20x25x3_f32-forward_backward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 1101/1101, 0/0
+signatory-2.13.0+cu130-cpu-high_channel_stress_8x10x7_f32-forward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 297/297, 0/0
+signatory-2.13.0+cu130-cpu-high_channel_stress_8x10x7_f32-forward_backward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 1149/1149, 0/0
+signatory-2.13.0+cu130-cpu-representative_100x10x2_f32-forward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 297/297, 0/0
+signatory-2.13.0+cu130-cpu-representative_100x10x2_f32-forward_backward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 909/909, 0/0
+signatory-2.13.0+cu130-cpu-traj_128x25x2_f32-forward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 360/360, 0/0
+signatory-2.13.0+cu130-cpu-traj_128x25x2_f32-forward_backward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 1164/1164, 0/0
+signatory-2.13.0+cu130-cuda-channels_20x25x3_f32-forward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 1176/1176, 198/198
+signatory-2.13.0+cu130-cuda-channels_20x25x3_f32-forward_backward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 4533/4533, 750/750
+signatory-2.13.0+cu130-cuda-high_channel_stress_8x10x7_f32-forward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 1497/1497, 243/243
+signatory-2.13.0+cu130-cuda-high_channel_stress_8x10x7_f32-forward_backward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 5502/5502, 855/855
+signatory-2.13.0+cu130-cuda-representative_100x10x2_f32-forward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 1497/1497, 243/243
+signatory-2.13.0+cu130-cuda-representative_100x10x2_f32-forward_backward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 5502/5502, 855/855
+signatory-2.13.0+cu130-cuda-traj_128x25x2_f32-forward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 1185/1185, 207/207
+signatory-2.13.0+cu130-cuda-traj_128x25x2_f32-forward_backward.json: CPU op sequence equal=True; kernel sequence equal=True; counts 4596/4596, 789/789

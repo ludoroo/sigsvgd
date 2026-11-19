@@ -1,0 +1,6 @@
+control cpu/1: all 55 NPZ arrays exactly equal
+patched cpu/1: all 55 NPZ arrays exactly equal
+control cpu/4: all 55 NPZ arrays exactly equal
+patched cpu/4: all 55 NPZ arrays exactly equal
+control cuda/1: all 55 NPZ arrays exactly equal
+patched cuda/1: all 55 NPZ arrays exactly equal
